@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="utf-8" /><title>Redirecting...</title></head>
+  <body>
+    <script>
+      (function () {
+        var path = window.location.pathname;
+        var suffix = window.location.search ? "&" + window.location.search.slice(1) : "";
+        window.location.replace("/?route=" + encodeURIComponent(path) + suffix + window.location.hash);
+      }());
+    </script>
+  </body>
+</html>
