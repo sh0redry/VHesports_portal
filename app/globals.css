@@ -15,7 +15,7 @@ button { cursor: pointer; }
 .site-shell { overflow: hidden; }
 .site-header { align-items: center; backdrop-filter: blur(18px); background: rgba(9, 11, 18, .8); border-bottom: 1px solid rgba(255,255,255,.09); display: flex; height: 76px; justify-content: space-between; padding: 0 clamp(20px, 5vw, 76px); position: sticky; top: 0; z-index: 30; }
 .wordmark { align-items: center; display: inline-flex; font-size: 1rem; font-weight: 800; gap: 10px; letter-spacing: .08em; }
-.wordmark-mark { align-items: center; background: #c8ff2f; border-radius: 50%; color: #0a0d13; display: grid; font-size: .78rem; height: 31px; place-items: center; transform: skew(-12deg); width: 31px; }
+.wordmark-mark { height: 38px; object-fit: contain; width: 38px; }
 .main-nav { align-items: center; display: flex; gap: clamp(16px, 2.8vw, 42px); }
 .main-nav a { border-bottom: 2px solid transparent; color: #c6c9d0; font-size: .83rem; font-weight: 700; letter-spacing: .1em; padding: 28px 0 25px; text-transform: uppercase; }
 .main-nav a:hover, .main-nav a.active { border-color: #c8ff2f; color: #fff; }
@@ -39,7 +39,7 @@ h1 em { color: #c8ff2f; font-style: normal; }
 .button.primary:hover { background: #e1ff78; }
 .button.ghost { border-color: rgba(255,255,255,.38); color: #fff; }
 .button.ghost:hover { background: rgba(255,255,255,.1); }
-.hero-logo { bottom: clamp(30px, 7vw, 80px); color: rgba(255,255,255,.5); font-size: .75rem; font-weight: 800; letter-spacing: .14em; position: absolute; right: clamp(20px, 7vw, 100px); text-align: right; text-transform: uppercase; }
+.hero-brand-logo { display: block; margin-bottom: 24px; max-height: 116px; max-width: min(310px, 70vw); object-fit: contain; object-position: left center; }
 
 section, .page { padding-left: clamp(20px, 9vw, 150px); padding-right: clamp(20px, 9vw, 150px); }
 .intro { display: grid; gap: 30px; grid-template-columns: .75fr 1.25fr; padding-bottom: clamp(75px, 11vw, 150px); padding-top: clamp(75px, 11vw, 150px); }
@@ -174,7 +174,7 @@ button.portal-card { color: #fff; }
 }
 @media (max-width: 520px) {
   h1 { font-size: 3.25rem; }
-  .hero-logo { display: none; }
+  .hero-brand-logo { max-height: 90px; }
   .highlight-frame { min-height: 420px; }
   .section-heading { align-items: start; flex-direction: column; gap: 12px; }
   .news-grid, .portal-grid, .committee-grid, .expect-grid { grid-template-columns: 1fr; }
