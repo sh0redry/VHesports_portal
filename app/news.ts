@@ -6,6 +6,7 @@ export type NewsPost = {
   date: string;
   tag: string;
   excerpt: string;
+  body: string;
 };
 
 const markdownFiles = import.meta.glob("../src/content/news/*.md", {
@@ -24,6 +25,7 @@ export const news: NewsPost[] = Object.entries(markdownFiles)
     title: field(source, "title"),
     date: field(source, "date"),
     tag: field(source, "tag"),
-    excerpt: source.split("---").slice(2).join("---").trim(),
+    body: source.split("---").slice(2).join("---").trim(),
+    excerpt: source.split("---").slice(2).join("---").trim().split("\n\n")[0],
   }))
   .sort((a, b) => b.slug.localeCompare(a.slug));

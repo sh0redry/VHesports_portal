@@ -16,7 +16,6 @@ export const committee = [
   { name: "Song Xinhang", roles: ["Leader", "Vice Leader - Mobile Games"], photo: "Song xinhang photo.jpg", telegram: "@Song_Xinhang" },
   { name: "Zhao Dingjia", preferred: "Justin", roles: ["Vice Leader", "Leader - PC Games"], photo: "Zhao Dingjia photo.jpg", telegram: "@Justin_Zha0" },
   { name: "Xiao Yadan", roles: ["Leader - Mobile Games"], photo: "Xiao Yadan photo.jpg", telegram: "@Angelina_XYD" },
-  { name: "Kyler Zhao", roles: ["Vice Leader - PC Games"], photo: "Kyler Zhao photo.jpg", telegram: "@KylerZhao" },
   { name: "Gary Yang", roles: ["Logistics"], photo: "Gary Yang photo.jpg", telegram: "@Gy_yang" },
 ];
 
@@ -71,12 +70,15 @@ export const icg = {
     "5 clusters; one E-Sports team from each cluster",
     "MLBB lineup: 5 players per cluster",
     "VALORANT lineup: 5 players per cluster",
-    "Registration target: 10 player slots per cluster across both games",
+    "Teams may register up to 10 players across both games",
     "Each game uses a single round-robin format",
     "Match format: Best-of-One (BO1)",
   ],
   keyRules: [
-    "Each team consists of 5 players and 1 substitute for both MLBB and VALORANT.",
+    "Each cluster registers one E-Sports team with a minimum of 8 and a maximum of 12 members.",
+    "Up to 10 players may be registered, allowing separate five-player lineups for VALORANT and MLBB.",
+    "A maximum of 2 players may participate in both VALORANT and MLBB, so every team needs at least 8 distinct players.",
+    "Up to 2 extra members may be registered as substitutes, bringing the maximum team size to 12 members.",
     "Players must be current Valour House residents and may represent only their own cluster.",
     "Teams must report at least 15 minutes before their scheduled match.",
     "Referees record results and capture the final scoreboard after each match.",
