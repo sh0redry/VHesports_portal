@@ -176,6 +176,22 @@ button.portal-card { color: #fff; }
 .unavailable-card h2 { font-size: clamp(2.6rem, 6vw, 5.5rem); line-height: .9; margin: 0 0 20px; text-transform: uppercase; }
 .unavailable-card p:last-child { color: #bfc4ce; line-height: 1.6; }
 .rulebook-image { background: #0c0e15; border: 1px solid rgba(200,255,47,.35); display: block; height: auto; max-width: 1050px; width: 100%; }
+.rulebook-section { padding: 0 0 52px; }
+.snapshot-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.snapshot-grid article { background: #151924; border: 1px solid rgba(255,255,255,.1); min-height: 130px; padding: 22px; }
+.snapshot-grid h2 { color: #c8ff2f; font-size: .78rem; letter-spacing: .1em; margin: 0 0 12px; text-transform: uppercase; }
+.snapshot-grid p { color: #e3e5e9; font-size: 1rem; line-height: 1.45; margin: 0; }
+.rule-table-wrap { border: 1px solid rgba(200,255,47,.65); overflow-x: auto; }
+.rule-table { border-collapse: collapse; min-width: 680px; width: 100%; }
+.rule-table th { background: #2c2345; color: #fff; font-size: .76rem; letter-spacing: .09em; padding: 15px; text-align: left; text-transform: uppercase; }
+.rule-table td { border-top: 1px solid rgba(255,255,255,.15); color: #dfe1e6; padding: 14px 15px; }
+.rule-sections { display: grid; gap: 18px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.rule-sections .rule-card:last-child:nth-child(odd) { grid-column: span 2; }
+.rule-card { background: #151924; border-top: 3px solid #c8ff2f; padding: 28px; }
+.rule-card h2 { font-size: clamp(1.45rem, 2.5vw, 2.2rem); line-height: 1; margin: 0 0 20px; text-transform: uppercase; }
+.rule-card ul { color: #c8ccd5; line-height: 1.6; margin: 0; padding-left: 22px; }
+.rule-card li { margin-bottom: 10px; }
+.rule-card li::marker { color: #c8ff2f; }
 .join-page { display: grid; gap: 25px; grid-template-columns: 1.1fr .9fr; }
 .join-panel { background: #151924; padding: clamp(25px, 5vw, 55px); }
 .join-panel h2 { font-size: clamp(2rem, 4vw, 4rem); line-height: .9; text-transform: uppercase; }
@@ -225,6 +241,7 @@ button.portal-card { color: #fff; }
   .icg-section-title, .registration-cta { align-items: start; flex-direction: column; }
   .format-grid { grid-template-columns: 1fr; }
   .format-grid .key-rules { grid-column: auto; }
+  .snapshot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 520px) {
   h1 { font-size: 3.25rem; }
@@ -234,6 +251,8 @@ button.portal-card { color: #fff; }
   .news-grid, .portal-grid, .committee-grid, .expect-grid { grid-template-columns: 1fr; }
   .toolkit-category-heading, .tool-grid { grid-template-columns: 1fr; }
   .scoring-strip { grid-template-columns: 1fr; }
+  .snapshot-grid, .rule-sections { grid-template-columns: 1fr; }
+  .rule-sections .rule-card:last-child:nth-child(odd) { grid-column: auto; }
   .game-card { aspect-ratio: 1; }
   .footer-top { flex-direction: column; }
   .footer-bottom { align-items: start; flex-direction: column; }
