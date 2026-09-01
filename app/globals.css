@@ -122,7 +122,7 @@ button.portal-card { color: #fff; }
 .carnival-challenge { background: #151924; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); margin: 30px 0; overflow: hidden; }
 .carnival-challenge > div { align-self: center; min-width: 0; padding: clamp(25px, 4vw, 52px); }
 .carnival-challenge h2 { line-height: 1.08; margin-top: 12px; }
-.carnival-challenge img { height: 100%; min-height: 300px; min-width: 0; object-fit: cover; width: 100%; }
+.carnival-challenge img { align-self: center; display: block; height: auto; min-width: 0; object-fit: contain; width: 100%; }
 .text-link { color: #c8ff2f; display: inline-block; font-size: .82rem; font-weight: 800; letter-spacing: .08em; margin-top: 12px; text-transform: uppercase; }
 .text-link:hover { color: #fff; }
 .carnival-reward { background: #c8ff2f; color: #091009; margin: 55px 0; padding: clamp(28px, 5vw, 56px); }
