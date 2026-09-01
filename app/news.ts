@@ -5,6 +5,7 @@ export type NewsPost = {
   title: string;
   date: string;
   tag: string;
+  order: number;
   excerpt: string;
   body: string;
 };
@@ -25,7 +26,8 @@ export const news: NewsPost[] = Object.entries(markdownFiles)
     title: field(source, "title"),
     date: field(source, "date"),
     tag: field(source, "tag"),
+    order: Number(field(source, "order")) || 0,
     body: source.split("---").slice(2).join("---").trim(),
     excerpt: source.split("---").slice(2).join("---").trim().split("\n\n")[0],
   }))
-  .sort((a, b) => b.slug.localeCompare(a.slug));
+  .sort((a, b) => b.order - a.order || b.slug.localeCompare(a.slug));

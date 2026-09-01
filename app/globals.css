@@ -115,6 +115,26 @@ button.portal-card { color: #fff; }
 .article { max-width: 820px; }
 .article-body { color: #c7cad2; font-size: 1.1rem; line-height: 1.8; }
 .article-body h2 { color: #fff; font-size: 1.9rem; margin-top: 45px; }
+.carnival-location { background: #181d29; border-left: 4px solid #c8ff2f; display: grid; gap: 4px; margin: 32px 0 45px; padding: 18px 22px; }
+.carnival-location span { color: #c8ff2f; font-size: .73rem; font-weight: 800; letter-spacing: .14em; }
+.carnival-location b { color: #fff; font-size: 1.2rem; }
+.carnival-challenge { background: #151924; display: grid; grid-template-columns: 1fr 1fr; margin: 30px 0; overflow: hidden; }
+.carnival-challenge > div { align-self: center; padding: clamp(25px, 4vw, 52px); }
+.carnival-challenge h2 { line-height: 1.08; margin-top: 12px; }
+.carnival-challenge img { height: 100%; min-height: 300px; object-fit: cover; width: 100%; }
+.text-link { color: #c8ff2f; display: inline-block; font-size: .82rem; font-weight: 800; letter-spacing: .08em; margin-top: 12px; text-transform: uppercase; }
+.text-link:hover { color: #fff; }
+.carnival-reward { background: #c8ff2f; color: #091009; margin: 55px 0; padding: clamp(28px, 5vw, 56px); }
+.carnival-reward .section-kicker { color: #394a0a; }
+.carnival-reward h2 { color: #091009; line-height: 1; margin: 12px 0 18px; text-transform: uppercase; }
+.button.dark { background: #10131d; color: #fff; }
+.button.dark:hover { background: #fff; color: #10131d; }
+.carnival-leaderboard { border: 1px solid rgba(200,255,47,.5); margin: 45px 0; padding: clamp(25px, 4vw, 48px); }
+.carnival-leaderboard h2, .carnival-finale h2 { line-height: 1.1; margin: 12px 0 18px; text-transform: uppercase; }
+.leaderboard-grid { display: grid; gap: 14px; grid-template-columns: 1fr 1fr; margin: 24px 0; }
+.leaderboard-grid article { align-items: center; background: #151924; color: #fff; display: flex; gap: 15px; padding: 22px; }
+.leaderboard-grid span { font-size: 1.6rem; }
+.carnival-finale { border-top: 2px solid #c8ff2f; margin-top: 58px; padding: 32px 0 10px; }
 
 .toolkit-categories { display: grid; gap: 70px; }
 .toolkit-category { padding: 0; }
@@ -242,6 +262,8 @@ button.portal-card { color: #fff; }
   .format-grid { grid-template-columns: 1fr; }
   .format-grid .key-rules { grid-column: auto; }
   .snapshot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .carnival-challenge { grid-template-columns: 1fr; }
+  .carnival-challenge-reverse img { order: 2; }
 }
 @media (max-width: 520px) {
   h1 { font-size: 3.25rem; }
@@ -254,6 +276,7 @@ button.portal-card { color: #fff; }
   .snapshot-grid, .rule-sections { grid-template-columns: 1fr; }
   .rule-sections .rule-card:last-child:nth-child(odd) { grid-column: auto; }
   .game-card { aspect-ratio: 1; }
+  .leaderboard-grid { grid-template-columns: 1fr; }
   .footer-top { flex-direction: column; }
   .footer-bottom { align-items: start; flex-direction: column; }
 }
