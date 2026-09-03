@@ -50,6 +50,43 @@ export const toolkitCategories = [
   },
 ];
 
+export const carnivalLeaderboard = {
+  aim: [
+    { rank: 1, name: "Dong chenxiao", cluster: 3, score: 8100 },
+    { rank: 2, name: "wayne", cluster: 1, score: 7524 },
+    { rank: 3, name: "ZHAO RENXUAN", cluster: 2, score: 7244 },
+    { rank: 4, name: "teh yu jian", cluster: 2, score: 7232 },
+    { rank: 5, name: "Zhao Dingjia", cluster: 4, score: 6939 },
+    { rank: 6, name: "Tang Lihao", cluster: 2, score: 6883 },
+    { rank: 7, name: "LI CHENGHAO", cluster: 4, score: 6698 },
+    { rank: 8, name: "Wang Zhiyuan", cluster: 1, score: 6437 },
+    { rank: 9, name: "Eason", cluster: 1, score: 6276 },
+    { rank: 10, name: "Ni Huacheng", cluster: 3, score: 6275 },
+  ],
+  reaction: [
+    { rank: 1, name: "mihikaa", cluster: 1, score: 125 },
+    { rank: 2, name: "Lu Jia hao", cluster: 4, score: 131 },
+    { rank: 3, name: "ZHAO RENXUAN", cluster: 2, score: 137 },
+    { rank: 4, name: "Tianle Xu", cluster: 3, score: 139 },
+    { rank: 5, name: "Eason", cluster: 1, score: 145 },
+    { rank: 6, name: "Wang Zhiyuan", cluster: 1, score: 146 },
+    { rank: 7, name: "wayne", cluster: 1, score: 147 },
+    { rank: 8, name: "ratish", cluster: 1, score: 150 },
+    { rank: 8, name: "Zou Xiaoyu", cluster: 4, score: 150 },
+    { rank: 10, name: "Ni Huacheng", cluster: 3, score: 151 },
+    { rank: 10, name: "jinjia", cluster: 2, score: 151 },
+    { rank: 12, name: "LI CHENGHAO", cluster: 4, score: 153 },
+    { rank: 13, name: "ben", cluster: 1, score: 154 },
+    { rank: 13, name: "christian", cluster: 2, score: 154 },
+    { rank: 15, name: "suhaan", cluster: 4, score: 155 },
+    { rank: 16, name: "Zhao Dingjia", cluster: 4, score: 156 },
+    { rank: 17, name: "Dong chenxiao", cluster: 3, score: 157 },
+    { rank: 18, name: "SHI HAORAN", cluster: 4, score: 159 },
+    { rank: 19, name: "Abby", cluster: 3, score: 160 },
+    { rank: 20, name: "tracy", cluster: 1, score: 161 },
+  ],
+};
+
 export const icg = {
   clusters: ["Cluster 1", "Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5"],
   scoring: [
