@@ -24,7 +24,7 @@ button { cursor: pointer; }
 .menu-button { background: transparent; border: 0; color: #fff; display: none; font-size: 1.5rem; }
 
 .hero { display: grid; isolation: isolate; min-height: min(760px, calc(100vh - 76px)); overflow: hidden; padding: clamp(68px, 12vw, 170px) clamp(20px, 9vw, 150px); place-items: center start; position: relative; }
-.hero::before { background: linear-gradient(90deg, #090b12 0%, rgba(9,11,18,.76) 47%, rgba(9,11,18,.15) 100%), url('/images/source/pc%20game2.png') center/cover; content: ''; inset: 0; opacity: .82; position: absolute; z-index: -2; }
+.hero::before { background: linear-gradient(90deg, #090b12 0%, rgba(9,11,18,.76) 47%, rgba(9,11,18,.15) 100%), url('/images/source/page-background.jpg') center/cover; content: ''; inset: 0; opacity: .82; position: absolute; z-index: -2; }
 .hero-glow { background: #c8ff2f; border-radius: 999px; filter: blur(80px); height: 34vw; opacity: .18; position: absolute; right: -11vw; top: -12vw; width: 34vw; z-index: -1; }
 .hero-copy { max-width: 760px; }
 .eyebrow, .section-kicker { color: #c8ff2f; font-size: .74rem; font-weight: 800; letter-spacing: .17em; margin: 0 0 20px; text-transform: uppercase; }
@@ -39,7 +39,7 @@ h1 em { color: #c8ff2f; font-style: normal; }
 .button.primary:hover { background: #e1ff78; }
 .button.ghost { border-color: rgba(255,255,255,.38); color: #fff; }
 .button.ghost:hover { background: rgba(255,255,255,.1); }
-.hero-brand-logo { display: block; margin-bottom: 24px; max-height: 116px; max-width: min(310px, 70vw); object-fit: contain; object-position: left center; }
+.hero-brand-logo { display: block; margin-bottom: 28px; max-height: 178px; max-width: min(455px, 82vw); object-fit: contain; object-position: left center; }
 
 section, .page { padding-left: clamp(20px, 9vw, 150px); padding-right: clamp(20px, 9vw, 150px); }
 .intro { display: grid; gap: 30px; grid-template-columns: .75fr 1.25fr; padding-bottom: clamp(75px, 11vw, 150px); padding-top: clamp(75px, 11vw, 150px); }
@@ -284,7 +284,7 @@ button.portal-card { color: #fff; }
 }
 @media (max-width: 520px) {
   h1 { font-size: 3.25rem; }
-  .hero-brand-logo { max-height: 90px; }
+  .hero-brand-logo { max-height: 126px; max-width: 82vw; }
   .highlight-frame { min-height: 420px; }
   .section-heading { align-items: start; flex-direction: column; gap: 12px; }
   .news-grid, .portal-grid, .committee-grid, .expect-grid { grid-template-columns: 1fr; }
