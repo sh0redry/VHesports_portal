@@ -10,6 +10,12 @@ export const games = {
     ["VALORANT", "Valorant.png"],
     ["Counter-Strike 2", "CS2.png"],
   ],
+  console: [
+    ["Super Smash Bros. Ultimate", "Super smash bro.png"],
+    ["EA SPORTS FC 26", "FIFA26.png"],
+    ["NBA 2K", "2K.png"],
+    ["Overcooked! 2", "Overcooked2.png"],
+  ],
 };
 
 export const committee = [

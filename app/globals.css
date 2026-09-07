@@ -39,7 +39,9 @@ h1 em { color: #c8ff2f; font-style: normal; }
 .button.primary:hover { background: #e1ff78; }
 .button.ghost { border-color: rgba(255,255,255,.38); color: #fff; }
 .button.ghost:hover { background: rgba(255,255,255,.1); }
-.hero-brand-logo { display: block; margin-bottom: 28px; max-height: 178px; max-width: min(455px, 82vw); object-fit: contain; object-position: left center; }
+.hero-logo-plaque { background: linear-gradient(135deg, rgba(249, 250, 255, .96), rgba(221, 218, 239, .93)); border: 1px solid rgba(238, 236, 255, .84); border-radius: 14px; box-shadow: inset 0 0 30px rgba(90, 42, 151, .13), 0 18px 45px rgba(0, 0, 0, .45), 0 0 0 1px rgba(177, 115, 255, .22); display: inline-flex; margin-bottom: 28px; padding: clamp(12px, 2vw, 22px) clamp(18px, 2.8vw, 32px); position: relative; }
+.hero-logo-plaque::before { border: 1px solid rgba(78, 35, 130, .16); border-radius: 9px; content: ''; inset: 7px; pointer-events: none; position: absolute; }
+.hero-brand-logo { display: block; filter: drop-shadow(0 5px 8px rgba(55, 19, 102, .25)); max-height: 178px; max-width: min(455px, 82vw); object-fit: contain; object-position: left center; position: relative; z-index: 1; }
 
 section, .page { padding-left: clamp(20px, 9vw, 150px); padding-right: clamp(20px, 9vw, 150px); }
 .intro { display: grid; gap: 30px; grid-template-columns: .75fr 1.25fr; padding-bottom: clamp(75px, 11vw, 150px); padding-top: clamp(75px, 11vw, 150px); }
@@ -284,7 +286,8 @@ button.portal-card { color: #fff; }
 }
 @media (max-width: 520px) {
   h1 { font-size: 3.25rem; }
-  .hero-brand-logo { max-height: 126px; max-width: 82vw; }
+  .hero-logo-plaque { margin-bottom: 24px; padding: 12px 18px; }
+  .hero-brand-logo { max-height: 126px; max-width: 74vw; }
   .highlight-frame { min-height: 420px; }
   .section-heading { align-items: start; flex-direction: column; gap: 12px; }
   .news-grid, .portal-grid, .committee-grid, .expect-grid { grid-template-columns: 1fr; }
