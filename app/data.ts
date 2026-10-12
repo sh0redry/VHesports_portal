@@ -93,6 +93,22 @@ export const carnivalLeaderboard = {
   ],
 };
 
+export const valorantSchedule = [
+  ["17 Oct 2026 (Saturday)", "11:45-12:00", "VALORANT Day 1 check-in and technical setup"],
+  ["17 Oct 2026 (Saturday)", "12:00-13:00", "Match 1 - Cluster 1 vs Cluster 2"],
+  ["17 Oct 2026 (Saturday)", "13:00-14:00", "Match 2 - Cluster 3 vs Cluster 4"],
+  ["17 Oct 2026 (Saturday)", "14:00-15:00", "Match 3 - Cluster 1 vs Cluster 5"],
+  ["17 Oct 2026 (Saturday)", "15:00-16:00", "Match 4 - Cluster 2 vs Cluster 3"],
+  ["17 Oct 2026 (Saturday)", "16:00-17:00", "Match 5 - Cluster 4 vs Cluster 5"],
+  ["18 Oct 2026 (Sunday)", "11:45-12:00", "VALORANT Day 2 check-in and technical setup"],
+  ["18 Oct 2026 (Sunday)", "12:00-13:00", "Match 6 - Cluster 1 vs Cluster 3"],
+  ["18 Oct 2026 (Sunday)", "13:00-14:00", "Match 7 - Cluster 2 vs Cluster 4"],
+  ["18 Oct 2026 (Sunday)", "14:00-15:00", "Match 8 - Cluster 1 vs Cluster 4"],
+  ["18 Oct 2026 (Sunday)", "15:00-16:00", "Match 9 - Cluster 2 vs Cluster 5"],
+  ["18 Oct 2026 (Sunday)", "16:00-17:00", "Match 10 - Cluster 3 vs Cluster 5"],
+  ["18 Oct 2026 (Sunday)", "17:00-18:00", "Final results confirmation / tie-break arrangement if required"],
+];
+
 export const icg = {
   clusters: ["Cluster 1", "Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5"],
   scoring: [
@@ -102,14 +118,7 @@ export const icg = {
     ["11 Oct 2026 (Sunday)", "17:15-17:30", "MLBB registration, device and network check"],
     ["11 Oct 2026 (Sunday)", "17:30-20:15", "MLBB Round-Robin Rounds 1-5 (10 matches; two matches may run concurrently)"],
     ["11 Oct 2026 (Sunday)", "20:15-20:30", "MLBB results confirmation / tie-break arrangement if required"],
-    ["16 Oct 2026 (Friday)", "17:45-18:00", "VALORANT Day 1 check-in and technical setup"],
-    ["16 Oct 2026 (Friday)", "18:00-19:00", "Match 1 - Cluster 1 vs Cluster 2"],
-    ["16 Oct 2026 (Friday)", "19:00-20:00", "Match 2 - Cluster 3 vs Cluster 4"],
-    ["16 Oct 2026 (Friday)", "20:00-21:00", "Match 3 - Cluster 4 vs Cluster 5"],
-    ["17 Oct 2026 (Saturday)", "13:45-14:00", "VALORANT Day 2 check-in and technical setup"],
-    ["17 Oct 2026 (Saturday)", "14:00-17:00", "VALORANT Day 2 - Matches 4-6"],
-    ["18 Oct 2026 (Sunday)", "13:45-14:00", "VALORANT Day 3 check-in and technical setup"],
-    ["18 Oct 2026 (Sunday)", "14:00-18:00", "VALORANT Day 3 - Matches 7-10 and final results confirmation"],
+    ...valorantSchedule,
   ],
   format: [
     "5 clusters; one E-Sports team from each cluster",
