@@ -93,6 +93,27 @@ export const carnivalLeaderboard = {
   ],
 };
 
+export const mlbbMatchRecords = [
+  { round: 1, venue: "sr1", team1: "Cluster 2", score1: 11, score2: 28, team2: "Cluster 5", winner: "Cluster 5" },
+  { round: 1, venue: "sr2", team1: "Cluster 3", score1: 13, score2: 3, team2: "Cluster 4", winner: "Cluster 3" },
+  { round: 2, venue: "sr1", team1: "Cluster 1", score1: 22, score2: 24, team2: "Cluster 5", winner: "Cluster 5" },
+  { round: 2, venue: "sr2", team1: "Cluster 2", score1: 5, score2: 26, team2: "Cluster 3", winner: "Cluster 3" },
+  { round: 3, venue: "sr1", team1: "Cluster 1", score1: 3, score2: 17, team2: "Cluster 4", winner: "Cluster 4" },
+  { round: 3, venue: "sr2", team1: "Cluster 3", score1: 21, score2: 1, team2: "Cluster 5", winner: "Cluster 3" },
+  { round: 4, venue: "sr1", team1: "Cluster 1", score1: 5, score2: 23, team2: "Cluster 3", winner: "Cluster 3" },
+  { round: 4, venue: "sr2", team1: "Cluster 2", score1: 5, score2: 22, team2: "Cluster 4", winner: "Cluster 4" },
+  { round: 5, venue: "sr1", team1: "Cluster 1", score1: 20, score2: 7, team2: "Cluster 2", winner: "Cluster 1" },
+  { round: 5, venue: "sr2", team1: "Cluster 4", score1: 23, score2: 9, team2: "Cluster 5", winner: "Cluster 4" },
+];
+
+export const vhcgStandings = [
+  { rank: 1, cluster: "Cluster 3", mlbbPoints: 10, valorantPoints: null },
+  { rank: 2, cluster: "Cluster 4", mlbbPoints: 7, valorantPoints: null },
+  { rank: 3, cluster: "Cluster 5", mlbbPoints: 5, valorantPoints: null },
+  { rank: 4, cluster: "Cluster 1", mlbbPoints: 3, valorantPoints: null },
+  { rank: 5, cluster: "Cluster 2", mlbbPoints: 1, valorantPoints: null },
+];
+
 export const valorantSchedule = [
   ["17 Oct 2026 (Saturday)", "11:45-12:00", "VALORANT Day 1 check-in and technical setup"],
   ["17 Oct 2026 (Saturday)", "12:00-13:00", "Match 1 - Cluster 1 vs Cluster 2"],

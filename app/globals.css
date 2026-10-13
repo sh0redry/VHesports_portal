@@ -192,6 +192,14 @@ button.portal-card { color: #fff; }
 .standings-table td:not(:nth-child(2)), .standings-table th:not(:nth-child(2)) { text-align: center; }
 .standings-table td:nth-child(2) { color: #c8ff2f; font-weight: 800; text-transform: uppercase; }
 .schedule-table td:first-child, .schedule-table td:nth-child(2) { color: #c8ff2f; font-weight: 750; white-space: nowrap; }
+.standings-note { color: #bfc4ce; line-height: 1.6; margin: 18px 0; }
+.match-records-section { padding-bottom: 60px; }
+.sr-only { border: 0; clip-path: inset(50%); height: 1px; overflow: hidden; padding: 0; position: absolute; white-space: nowrap; width: 1px; }
+.match-records-table { min-width: 850px; }
+.match-records-table td:nth-child(4), .match-records-table td:nth-child(5) { color: #fff; font-weight: 800; text-align: center; }
+.match-records-table th:nth-child(4), .match-records-table th:nth-child(5) { text-align: center; }
+.match-records-table td:last-child { color: #c8ff2f; font-weight: 800; }
+.match-records-table tr:nth-child(4n + 1), .match-records-table tr:nth-child(4n + 2) { background: rgba(128, 91, 190, .08); }
 .scoring-strip { background: #151924; display: grid; gap: 1px; grid-template-columns: repeat(5, 1fr); margin: 18px 0 25px; }
 .scoring-strip div { background: #151924; padding: 20px 14px; text-align: center; }
 .scoring-strip strong, .scoring-strip span { display: block; }
