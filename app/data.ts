@@ -106,13 +106,43 @@ export const mlbbMatchRecords = [
   { round: 5, venue: "sr2", team1: "Cluster 4", score1: 23, score2: 9, team2: "Cluster 5", winner: "Cluster 4" },
 ];
 
+export const valorantMatchRecords = [
+  { match: 1, day: "Day 1", date: "17 Oct 2026 (Saturday)", time: "12:00-13:00", team1: "Cluster 1", score1: 3, score2: 13, team2: "Cluster 2" },
+  { match: 2, day: "Day 1", date: "17 Oct 2026 (Saturday)", time: "13:00-14:00", team1: "Cluster 3", score1: 13, score2: 9, team2: "Cluster 4" },
+  { match: 3, day: "Day 1", date: "17 Oct 2026 (Saturday)", time: "14:00-15:00", team1: "Cluster 1", score1: 6, score2: 13, team2: "Cluster 5" },
+  { match: 4, day: "Day 1", date: "17 Oct 2026 (Saturday)", time: "15:00-16:00", team1: "Cluster 2", score1: 13, score2: 6, team2: "Cluster 3" },
+  { match: 5, day: "Day 1", date: "17 Oct 2026 (Saturday)", time: "16:00-17:00", team1: "Cluster 4", score1: 8, score2: 13, team2: "Cluster 5" },
+  { match: 6, day: "Day 2", date: "18 Oct 2026 (Sunday)", time: "12:00-13:00", team1: "Cluster 1", score1: 13, score2: 7, team2: "Cluster 3" },
+  { match: 7, day: "Day 2", date: "18 Oct 2026 (Sunday)", time: "13:00-14:00", team1: "Cluster 2", score1: 13, score2: 3, team2: "Cluster 4" },
+  { match: 8, day: "Day 2", date: "18 Oct 2026 (Sunday)", time: "14:00-15:00", team1: "Cluster 1", score1: 13, score2: 8, team2: "Cluster 4" },
+  { match: 9, day: "Day 2", date: "18 Oct 2026 (Sunday)", time: "15:00-16:00", team1: "Cluster 2", score1: 5, score2: 13, team2: "Cluster 5" },
+  { match: 10, day: "Day 2", date: "18 Oct 2026 (Sunday)", time: "16:00-17:00", team1: "Cluster 3", score1: 6, score2: 13, team2: "Cluster 5" },
+].map(match => ({ ...match, winner: match.score1 > match.score2 ? match.team1 : match.team2, winMargin: Math.abs(match.score1 - match.score2) }));
+
+export const valorantStandings = [
+  { rank: 1, cluster: "Cluster 5", points: 10 },
+  { rank: 2, cluster: "Cluster 2", points: 7 },
+  { rank: 3, cluster: "Cluster 1", points: 5 },
+  { rank: 4, cluster: "Cluster 3", points: 3 },
+  { rank: 5, cluster: "Cluster 4", points: 1 },
+].map(entry => {
+  const matches = valorantMatchRecords.filter(match => match.team1 === entry.cluster || match.team2 === entry.cluster);
+  const won = matches.filter(match => match.winner === entry.cluster).length;
+  const roundsWon = matches.reduce((total, match) => total + (match.team1 === entry.cluster ? match.score1 : match.score2), 0);
+  const roundsLost = matches.reduce((total, match) => total + (match.team1 === entry.cluster ? match.score2 : match.score1), 0);
+  return { ...entry, played: matches.length, won, lost: matches.length - won, roundsWon, roundsLost, roundDiff: roundsWon - roundsLost };
+});
+
 export const vhcgStandings = [
-  { rank: 1, cluster: "Cluster 3", mlbbPoints: 10, valorantPoints: null },
-  { rank: 2, cluster: "Cluster 4", mlbbPoints: 7, valorantPoints: null },
-  { rank: 3, cluster: "Cluster 5", mlbbPoints: 5, valorantPoints: null },
-  { rank: 4, cluster: "Cluster 1", mlbbPoints: 3, valorantPoints: null },
-  { rank: 5, cluster: "Cluster 2", mlbbPoints: 1, valorantPoints: null },
-];
+  { cluster: "Cluster 1", mlbbPoints: 3 },
+  { cluster: "Cluster 2", mlbbPoints: 1 },
+  { cluster: "Cluster 3", mlbbPoints: 10 },
+  { cluster: "Cluster 4", mlbbPoints: 7 },
+  { cluster: "Cluster 5", mlbbPoints: 5 },
+].map(entry => ({ ...entry, valorantPoints: valorantStandings.find(team => team.cluster === entry.cluster)!.points }))
+  .map(entry => ({ ...entry, totalPoints: entry.mlbbPoints + entry.valorantPoints }))
+  .sort((a, b) => b.totalPoints - a.totalPoints)
+  .map((entry, _, teams) => ({ ...entry, rank: 1 + teams.filter(team => team.totalPoints > entry.totalPoints).length }));
 
 export const valorantSchedule = [
   ["17 Oct 2026 (Saturday)", "11:45-12:00", "VALORANT Day 1 check-in and technical setup"],

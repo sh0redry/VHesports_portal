@@ -196,6 +196,11 @@ button.portal-card { color: #fff; }
 .match-records-section { padding-bottom: 60px; }
 .sr-only { border: 0; clip-path: inset(50%); height: 1px; overflow: hidden; padding: 0; position: absolute; white-space: nowrap; width: 1px; }
 .match-records-table { min-width: 850px; }
+.valorant-results-table { min-width: 1150px; }
+.valorant-standings-table { min-width: 900px; }
+.valorant-results-table td:nth-child(3), .valorant-results-table td:nth-child(4) { white-space: nowrap; }
+.rule-table .result-score { color: #fff; font-weight: 800; }
+.rule-table .result-winner { color: #c8ff2f; font-weight: 800; }
 .match-records-table td:nth-child(4), .match-records-table td:nth-child(5) { color: #fff; font-weight: 800; text-align: center; }
 .match-records-table th:nth-child(4), .match-records-table th:nth-child(5) { text-align: center; }
 .match-records-table td:last-child { color: #c8ff2f; font-weight: 800; }
