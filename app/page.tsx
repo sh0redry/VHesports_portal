@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { asset, carnivalLeaderboard, committee, games, icg, mlbbMatchRecords, valorantMatchRecords, valorantStandings, vhcgStandings, telegramUrl, toolkitCategories } from "./data";
+import { asset, carnivalLeaderboard, committee, games, icg, mlbbMatchRecords, valorantMatchRecords, vhcgStandings, telegramUrl, toolkitCategories } from "./data";
 import { rulebooks } from "./icgRulebooks";
 import { news } from "./news";
 
@@ -85,13 +85,6 @@ function MatchRecords({ go }: { go: (to: Page) => void }) {
         {valorantMatchRecords.map(match => <tr key={match.match}><td>{match.match}</td><td>{match.day}</td><td>{match.date}</td><td>{match.time}</td><td>{match.team1}</td><td className="result-score">{match.score1}</td><td className="result-score">{match.score2}</td><td>{match.team2}</td><td className="result-winner">{match.winner}</td><td>{match.winMargin}</td></tr>)}
       </tbody></table></div>
       <p className="standings-note">Scores and match winners reflect the confirmed game screenshots. Win Margin is the winning score minus the losing score.</p>
-    </section>
-    <section className="match-records-section">
-      <div className="icg-section-title"><div><p className="section-kicker">18 OCT 2026 / FINAL TOURNAMENT STANDINGS</p><h2>VALORANT Standings</h2></div><p>Round-robin team performance and awarded ranking points.</p></div>
-      <div className="rule-table-wrap"><table className="rule-table valorant-standings-table"><caption className="sr-only">VALORANT final tournament standings</caption><thead><tr>{["Rank", "Cluster", "Played", "Won", "Lost", "Rounds Won", "Rounds Lost", "Round Diff.", "Points"].map(label => <th scope="col" key={label}>{label}</th>)}</tr></thead><tbody>
-        {valorantStandings.map(team => <tr key={team.cluster}><td>{team.rank}</td><td>{team.cluster}</td><td>{team.played}</td><td>{team.won}</td><td>{team.lost}</td><td>{team.roundsWon}</td><td>{team.roundsLost}</td><td>{team.roundDiff}</td><td className="result-winner">{team.points}</td></tr>)}
-      </tbody></table></div>
-      <p className="standings-note">Placement points: 1st = 10, 2nd = 7, 3rd = 5, 4th = 3, 5th = 1. Results are based on completed match scoreboards.</p>
     </section>
   </main>;
 }
