@@ -93,6 +93,14 @@ export const carnivalLeaderboard = {
   ],
 };
 
+export const valorantTopPlayers = [
+  { rank: 1, cluster: "C5", name: "Alexander", gameId: "aadoooo", matches: 4, kills: 88, deaths: 50, assists: 34, kdRatio: "1.76", netKills: 38, firstBloods: 13, recognition: "Tournament MVP" },
+  { rank: 2, cluster: "C2", name: "Guan Cen", gameId: "needhealing", matches: 4, kills: 67, deaths: 34, assists: 29, kdRatio: "1.97", netKills: 33, firstBloods: 5, recognition: "Top 5 Player" },
+  { rank: 3, cluster: "C5", name: "Karmandeep", gameId: "jeff2121jeff", matches: 4, kills: 74, deaths: 47, assists: 27, kdRatio: "1.57", netKills: 27, firstBloods: 14, recognition: "Top 5 Player" },
+  { rank: 4, cluster: "C5", name: "Yan Mo", gameId: "Mo20Tohsaka", matches: 4, kills: 78, deaths: 49, assists: 20, kdRatio: "1.59", netKills: 29, firstBloods: 8, recognition: "Top 5 Player" },
+  { rank: 5, cluster: "C2", name: "Wayen", gameId: "woshida", matches: 3, kills: 57, deaths: 36, assists: 15, kdRatio: "1.58", netKills: 21, firstBloods: 16, recognition: "Top 5 Player" },
+];
+
 export const mlbbMatchRecords = [
   { round: 1, venue: "sr1", team1: "Cluster 2", score1: 11, score2: 28, team2: "Cluster 5", winner: "Cluster 5" },
   { round: 1, venue: "sr2", team1: "Cluster 3", score1: 13, score2: 3, team2: "Cluster 4", winner: "Cluster 3" },
