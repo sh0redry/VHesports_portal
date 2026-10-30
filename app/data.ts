@@ -141,16 +141,23 @@ export const valorantStandings = [
   return { ...entry, played: matches.length, won, lost: matches.length - won, roundsWon, roundsLost, roundDiff: roundsWon - roundsLost };
 });
 
+export const mlbbTieBreakerRecords = [
+  { match: 1, date: "25 Oct 2026 (Sunday)", team1: "Cluster 1", score1: 28, score2: 10, team2: "Cluster 2", winner: "Cluster 1" },
+  { match: 2, date: "25 Oct 2026 (Sunday)", team1: "Cluster 2", score1: 8, score2: 12, team2: "Cluster 4", winner: "Cluster 4" },
+  { match: 3, date: "25 Oct 2026 (Sunday)", team1: "Cluster 4", score1: 3, score2: 18, team2: "Cluster 1", winner: "Cluster 1" },
+];
+
+// Confirmed overall ranks after the 25 October MLBB tie-breakers.
+// Tie-breakers resolve overall rank without changing either game's placement points.
 export const vhcgStandings = [
-  { cluster: "Cluster 1", mlbbPoints: 3 },
-  { cluster: "Cluster 2", mlbbPoints: 1 },
-  { cluster: "Cluster 3", mlbbPoints: 10 },
-  { cluster: "Cluster 4", mlbbPoints: 7 },
-  { cluster: "Cluster 5", mlbbPoints: 5 },
+  { rank: 3, cluster: "Cluster 1", mlbbPoints: 3 },
+  { rank: 5, cluster: "Cluster 2", mlbbPoints: 1 },
+  { rank: 2, cluster: "Cluster 3", mlbbPoints: 10 },
+  { rank: 4, cluster: "Cluster 4", mlbbPoints: 7 },
+  { rank: 1, cluster: "Cluster 5", mlbbPoints: 5 },
 ].map(entry => ({ ...entry, valorantPoints: valorantStandings.find(team => team.cluster === entry.cluster)!.points }))
   .map(entry => ({ ...entry, totalPoints: entry.mlbbPoints + entry.valorantPoints }))
-  .sort((a, b) => b.totalPoints - a.totalPoints)
-  .map((entry, _, teams) => ({ ...entry, rank: 1 + teams.filter(team => team.totalPoints > entry.totalPoints).length }));
+  .sort((a, b) => a.rank - b.rank);
 
 export const valorantSchedule = [
   ["17 Oct 2026 (Saturday)", "11:45-12:00", "VALORANT Day 1 check-in and technical setup"],
