@@ -118,6 +118,17 @@ button.portal-card { color: #fff; }
 .carnival-article { margin-left: auto; margin-right: auto; max-width: 1240px; }
 .article-body { color: #c7cad2; font-size: 1.1rem; line-height: 1.8; }
 .article-body h2 { color: #fff; font-size: 1.9rem; margin-top: 45px; }
+.smash-results-article { margin-left: auto; margin-right: auto; max-width: 1240px; }
+.smash-results-intro { align-items: center; display: grid; gap: clamp(24px, 4vw, 56px); grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.smash-results-intro figure, .smash-group-photo { margin: 0; min-width: 0; }
+.smash-results-article img { display: block; height: auto; max-width: 100%; width: 100%; }
+.smash-results-intro img { margin: 0 auto; max-width: 420px; }
+.smash-results-article figcaption { color: #b7bbc4; font-size: .9rem; margin-top: 12px; text-align: center; }
+.smash-placements { list-style: none; margin: 26px 0; padding: 0; }
+.smash-placements li { background: #151924; margin: 8px 0; padding: 14px 18px; }
+.smash-placements li:first-child { background: #f7e6b2; color: #302011; font-weight: 850; }
+.smash-group-photo { margin-top: 36px; }
+@media (max-width: 720px) { .smash-results-intro { grid-template-columns: minmax(0, 1fr); } }
 .carnival-location { background: #181d29; border-left: 4px solid #c8ff2f; display: grid; gap: 4px; margin: 32px 0 45px; padding: 18px 22px; }
 .carnival-location span { color: #c8ff2f; font-size: .73rem; font-weight: 800; letter-spacing: .14em; }
 .carnival-location b { color: #fff; font-size: 1.2rem; }
