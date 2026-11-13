@@ -31,7 +31,7 @@ export type CommitteeMember = {
 export const committee: CommitteeMember[] = [
   { name: "Zhao Dingjia", preferred: "Justin", roles: ["Leader", "Leader - PC Games"], photo: "Zhao Dingjia photo.jpg", telegram: "@Justin_Zha0" },
   { name: "Xiao Yadan", roles: ["Assistant Leader", "Leader - Mobile Games"], photo: "Xiao Yadan photo.jpg", telegram: "@Angelina_XYD" },
-  { name: "Ni Huacheng", roles: ["Leader - Console Games"], telegram: "@MsKHua" },
+  { name: "Ni Huacheng", roles: ["Leader - Console Games"], photo: "Ni Huacheng photo.jpg", telegram: "@MsKHua" },
 ];
 
 // Each tool has an `icon`: one of the names drawn in app/components/ToolIcon.tsx.

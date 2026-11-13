@@ -6,6 +6,11 @@ A record of every update to vhesports.com, with dates. Newest first.
 
 ## 2026-11-13
 
+### 委员会:补上 Ni Huacheng 的照片 / Committee: Ni Huacheng's photo added
+
+- Ni Huacheng 的卡片由队徽占位图换成了他的照片。
+  Ni Huacheng's card now shows his photo instead of the emblem placeholder.
+
 ### 首页开场动画 / Homepage opening sequence
 
 - 打开首页时先播放一段开场:深色全屏上队徽放大弹出 → 旁边展开 "VALOUR HOUSE E-SPORTS" 名字 → 两者一起缩小并飞到左上角,正好落在导航栏的标志位置 → 深色背景淡出,首页原有的入场动画(背景、队徽、标题、简介、按钮依次出现)接着播放。全程约 3.3 秒。
