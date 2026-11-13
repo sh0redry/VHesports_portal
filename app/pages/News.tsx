@@ -1,6 +1,7 @@
 import { customArticles } from "../articles";
 import { ArticleShell } from "../articles/ArticleShell";
 import { NewsCover } from "../components/NewsCover";
+import { Title } from "../components/Title";
 import { telegramUrl } from "../data";
 import { Markdown } from "../markdown";
 import { blocksOf, news } from "../news";
@@ -19,7 +20,7 @@ export function News() {
         <NewsCover item={item} />
         <div className="news-row-text">
           <span className="news-meta">{item.tag} / {item.date}</span>
-          <h2>{item.title}</h2>
+          <h2><Title text={item.title} /></h2>
           <p>{item.excerpt}</p>
         </div>
         <b>→</b>

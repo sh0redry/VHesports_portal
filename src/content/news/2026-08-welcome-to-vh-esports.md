@@ -22,7 +22,3 @@ We are starting with these games:
 - **[VHCG](/vhcg):** everything about the Valour House Cluster Games E-Sports competition, including the rules, schedule, standings, match records and the detailed MLBB and VALORANT rulebooks.
 - **[Player Toolkit](/toolkit):** a collection of practical online tools for players. If you are newer to FPS games, try the MSLAB aim trainer to test your sensitivity and find a setup that feels right.
 - **[Committee](/committee):** the people running VH E-Sports, and how to reach them.
-
-## Join us
-
-Session announcements, event updates and tournament information are all shared in our Telegram group. [Join the community](/join) and say hello.

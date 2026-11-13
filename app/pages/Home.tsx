@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { NewsCover } from "../components/NewsCover";
+import { Title } from "../components/Title";
 import { asset, games } from "../data";
 import { news } from "../news";
 import { Link } from "../router";
@@ -80,7 +81,7 @@ export function Home() {
         {news.slice(0, 3).map(item => <Link className="news-card" to={`/news/${item.slug}`} key={item.slug}>
           <NewsCover item={item} />
           <span className="news-meta">{item.tag} / {item.date}</span>
-          <h3>{item.title}</h3>
+          <h3><Title text={item.title} /></h3>
           <p>{item.excerpt}</p>
           <b className="news-arrow">→</b>
         </Link>)}

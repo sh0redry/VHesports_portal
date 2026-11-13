@@ -6,6 +6,15 @@ A record of every update to vhesports.com, with dates. Newest first.
 
 ## 2026-11-13
 
+### Welcome 新闻页排版修正 / Welcome post layout fixes
+
+- 普通新闻页(如 Welcome)的正文原来挤在页面左侧一条 560 像素宽的窄栏里,右边大片空白。现在正文栏宽 820 像素并在页面居中。
+  On standard news pages (such as Welcome) the text used to sit in a 560 px column on the left with a large empty area on the right. The text column is now 820 px wide and centred.
+- Welcome 一文去掉结尾的 "Join us" 段落,因为它和页面自带的 "Stay connected" 段落重复。
+  Removed the closing "Join us" section from the Welcome post, which duplicated the page's built-in "Stay connected" section.
+- 标题里带连字符的词(如 "E-Sports")不再被拆到两行。
+  Hyphenated words in titles (such as "E-Sports") are no longer split across two lines.
+
 ### 多屏幕宽度适配 / Layout fixes across screen widths
 
 - 新闻列表页重排:封面图放大并随屏幕宽度变化(190–300 像素),标签和日期移到标题上方,标题字号调小。原来封面太小、标题过大,在电脑上比例失衡,在较窄的窗口里标题会被挤成四五行。手机上封面显示在标题上方。

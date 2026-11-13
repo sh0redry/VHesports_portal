@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Title } from "../components/Title";
 import type { NewsPost } from "../news";
 import { Link } from "../router";
 
@@ -8,7 +9,7 @@ export function ArticleShell({ item, className, children }: { item: NewsPost; cl
     <Link className="button ghost" to="/news">← All news</Link>
     <div className="page-hero">
       <p className="eyebrow">{item.tag} / {item.date}</p>
-      <h1>{item.title}</h1>
+      <h1><Title text={item.title} /></h1>
       <p className="lede">{item.excerpt}</p>
     </div>
     <div className="article-body">{children}</div>
