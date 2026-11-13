@@ -98,7 +98,7 @@ export const valorantTopPlayers = [
   { rank: 2, cluster: "C2", name: "Guan Cen", gameId: "needhealing", matches: 4, kills: 67, deaths: 34, assists: 29, kdRatio: "1.97", netKills: 33, firstBloods: 5, recognition: "Top 5 Player" },
   { rank: 3, cluster: "C5", name: "Karmandeep", gameId: "jeff2121jeff", matches: 4, kills: 74, deaths: 47, assists: 27, kdRatio: "1.57", netKills: 27, firstBloods: 14, recognition: "Top 5 Player" },
   { rank: 4, cluster: "C5", name: "Yan Mo", gameId: "Mo20Tohsaka", matches: 4, kills: 78, deaths: 49, assists: 20, kdRatio: "1.59", netKills: 29, firstBloods: 8, recognition: "Top 5 Player" },
-  { rank: 5, cluster: "C2", name: "Wayen", gameId: "woshida", matches: 3, kills: 57, deaths: 36, assists: 15, kdRatio: "1.58", netKills: 21, firstBloods: 16, recognition: "Top 5 Player" },
+  { rank: 5, cluster: "C2", name: "Wayne", gameId: "woshida", matches: 3, kills: 57, deaths: 36, assists: 15, kdRatio: "1.58", netKills: 21, firstBloods: 16, recognition: "Top 5 Player" },
 ];
 
 export const mlbbMatchRecords = [

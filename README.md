@@ -9,7 +9,7 @@ Static official website for Valour House E-Sports at NUS, built with React and V
 - Replace images in `public/images/source/` and keep their filenames aligned with `app/data.ts`.
 - The Telegram invite is maintained in one place: `telegramUrl` in `app/data.ts`.
 
-The site includes Home, News, individual-news, Committee, ICG, and Join Us views. `public/404.html` routes direct GitHub Pages visits such as `/news/...` back into the static app.
+The site includes Home, News, individual-news, Committee, VHCG, and Join Us views. `public/404.html` routes direct GitHub Pages visits such as `/news/...` back into the static app.
 
 ## Local development
 
