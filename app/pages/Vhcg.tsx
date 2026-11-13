@@ -6,7 +6,7 @@ function ValorantTopPlayers() {
   return <section className="top-players-section" aria-labelledby="top-players-title">
     <div className="icg-section-title">
       <div><p className="section-kicker">17-18 OCTOBER 2026 / INDIVIDUAL PERFORMANCE</p><h2 id="top-players-title">VALORANT Top 5 Players</h2></div>
-      <p>All recorded matches. Names to be confirmed.</p>
+      <p>Across all recorded matches.</p>
     </div>
     <div className="rule-table-wrap">
       <table className="rule-table top-players-table">

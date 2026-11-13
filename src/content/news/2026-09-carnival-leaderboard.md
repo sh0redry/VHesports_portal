@@ -1,6 +1,6 @@
 ---
 title: Carnival Challenge Leaderboards Are Live!
-date: CARNIVAL 2026
+date: SEP 2026
 tag: RESULTS
 cover: four-target-aim-challenge.jpg
 order: 20

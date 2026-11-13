@@ -1,5 +1,5 @@
 ---
-title: 🏆 SMASH BROS TOURNAMENT RESULTS 🏆
+title: Smash Bros Tournament Results
 date: NOV 2026
 tag: TOURNAMENT RESULTS
 cover: smash-tournament-group.jpg
@@ -18,4 +18,4 @@ What a night! Thanks to everyone who came down to play and watch 🔥
 
 Huge congrats to Max for taking the crown, and well played to everyone who battled it out tonight! 🎮
 
-Thanks for making it such a fun session, and see you at the next one(probably happening next sem)! 💥
+Thanks for making it such a fun session, and see you at the next one (probably happening next sem)! 💥

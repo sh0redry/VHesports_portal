@@ -26,8 +26,8 @@ function inline(text: string): ReactNode[] {
       nodes.push(href.startsWith("/")
         ? <Link to={href} key={key}>{match[1]}</Link>
         : <a href={href} target="_blank" rel="noopener noreferrer" key={key}>{match[1]}</a>);
-    } else if (match[3] !== undefined) nodes.push(<b key={key}>{match[3]}</b>);
-    else nodes.push(<em key={key}>{match[4]}</em>);
+    } else if (match[3] !== undefined) nodes.push(<b key={key}>{inline(match[3])}</b>); // bold may contain a link
+    else nodes.push(<em key={key}>{inline(match[4])}</em>);
     last = start + match[0].length;
   }
   if (last < text.length) nodes.push(text.slice(last));

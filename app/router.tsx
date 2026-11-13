@@ -10,9 +10,12 @@ const isKnown = (path: string) => mainRoutes.includes(path) || path.startsWith("
 
 // The VHCG section used to live under /icg; keep old shared links working.
 const legacyPrefix = "/" + "icg";
+// Two early posts were merged into the welcome post; their old links lead there.
+const mergedPosts = ["/news/mobile-pc-community", "/news/icg-rules-player-toolkit"];
 function cleanPath(path: string) {
   let result = path === legacyPrefix || path.startsWith(`${legacyPrefix}/`) ? `/vhcg${path.slice(legacyPrefix.length)}` : path;
   if (result === "/index.html") result = "/";
+  if (mergedPosts.includes(result)) result = "/news/welcome-to-vh-esports";
   // "/vhcg/" and "/vhcg" are the same page.
   if (result.length > 1 && result.endsWith("/")) result = result.replace(/\/+$/, "") || "/";
   return result;

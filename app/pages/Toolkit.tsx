@@ -5,7 +5,7 @@ export function Toolkit() {
     <div className="page-hero">
       <p className="eyebrow">PLAYER TOOLKIT</p>
       <h1>Tools for<br /><em>better play.</em></h1>
-      <p className="lede">A curated set of English-language tools for planning, training and tuning your gaming setup.</p>
+      <p className="lede">A curated set of online tools for planning, training and tuning your gaming setup.</p>
     </div>
     <div className="toolkit-categories">
       {toolkitCategories.map(category => <section className="toolkit-category" key={category.title}>

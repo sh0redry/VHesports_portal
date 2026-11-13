@@ -6,6 +6,23 @@ A record of every update to vhesports.com, with dates. Newest first.
 
 ## 2026-11-13
 
+### 第三批优化:文案和内容 / Upgrade batch 3: copy and content
+
+- 把三篇早期新闻(Welcome to VH E-Sports、One community. Different games.、VHCG Rules and Player Toolkit Update)合并为一篇 "Welcome to VH E-Sports",作为兴趣小组和网站创建时的初始通知,并重写了正文。另外两篇的旧链接会自动跳到这一篇。
+  Merged three early news posts (Welcome to VH E-Sports; One community. Different games.; VHCG Rules and Player Toolkit Update) into a single "Welcome to VH E-Sports" post, the launch notice for the interest group and the website, with rewritten text. The old links of the other two lead to it.
+- Join 页 FAQ 新增三条:谁可以加入(以 Valour House 住户为主,也欢迎 NUS 的朋友参加日常活动;比赛仅限住户)、是否收费(完全免费)、怎么知道活动安排(Telegram 群和网站新闻)。
+  Added three FAQ entries on the Join page: who can join (run for Valour House residents, friends from NUS welcome at casual sessions, competitions for residents only), whether it costs anything (completely free), and how to hear about sessions (the Telegram group and the News section).
+- VHCG 页:Top 5 名单已确认,去掉 "Names to be confirmed"。
+  VHCG page: the Top 5 names are confirmed, so "Names to be confirmed" was removed.
+- 新闻日期格式统一:嘉年华两篇的 "CARNIVAL 2026" 改为 "SEP 2026"。
+  News dates made consistent: the two Carnival posts now say "SEP 2026" instead of "CARNIVAL 2026".
+- Smash Bros 那篇:标题去掉奖杯表情,改为 "Smash Bros Tournament Results";修正正文括号前缺少的空格。
+  Smash Bros post: the trophy emoji were removed from the title, now "Smash Bros Tournament Results"; a missing space before a bracket was fixed.
+- Join 页 "PC and mobile communities" 改为 "Mobile, PC and console";Toolkit 页去掉 "English-language" 的说法。
+  The Join page now says "Mobile, PC and console" instead of "PC and mobile communities"; "English-language" was dropped from the Toolkit page intro.
+- 修复新闻 Markdown 中加粗文字里的链接不生效的问题。
+  Fixed links inside bold text not working in news Markdown.
+
 ### 第二批优化:视觉和体验 / Upgrade batch 2: look and feel
 
 - 品牌色:保留荧光绿为主色,把队徽的紫色定为统一的辅助色(首页光晕、卡片标签、新闻占位图、页脚分隔线等)。
