@@ -6,6 +6,19 @@ A record of every update to vhesports.com, with dates. Newest first.
 
 ## 2026-11-13
 
+### 委员会名单更新 / Committee update
+
+- Zhao Dingjia (Justin) 接任 Leader(原 Vice Leader),继续兼任 Leader - PC Games。
+  Zhao Dingjia (Justin) takes over as Leader (previously Vice Leader) and remains Leader - PC Games.
+- Xiao Yadan 新增 Assistant Leader 头衔,继续兼任 Leader - Mobile Games。
+  Xiao Yadan gains the title Assistant Leader and remains Leader - Mobile Games.
+- 新成员 Ni Huacheng(Telegram @MsKHua)加入,担任 Leader - Console Games。照片暂缺,先显示队徽占位图。
+  New member Ni Huacheng (Telegram @MsKHua) joins as Leader - Console Games. His photo is not ready yet, so an emblem placeholder is shown.
+- Song Xinhang(下学期赴 SEP 交换)和 Gary Yang 已离任,从名单中移除。
+  Song Xinhang (leaving on SEP exchange next semester) and Gary Yang have stepped down and are removed from the list.
+- 委员会页改为三人一行;没有照片的成员会显示占位图,补照片时只需在数据里填上文件名。
+  The committee page now shows three members in a row; a member without a photo gets a placeholder, and adding the photo later only needs its file name in the data.
+
 ### Player Toolkit 升级:手游工具和图标 / Player Toolkit upgrade: mobile tools and icons
 
 - 新增 "Mobile Game Tools" 分类,共 4 个工具,全部是官方网站:MLBB 英雄排行(胜率、出场率、禁用率和克制关系)、MLBB 英雄图鉴、Honor of Kings 官网、HOK Camp(王者荣耀国际版官方社区,含英雄百科、排行榜和电竞)。

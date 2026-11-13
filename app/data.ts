@@ -18,11 +18,20 @@ export const games = {
   ],
 };
 
-export const committee = [
-  { name: "Song Xinhang", roles: ["Leader", "Vice Leader - Mobile Games"], photo: "Song xinhang photo.jpg", telegram: "@Song_Xinhang" },
-  { name: "Zhao Dingjia", preferred: "Justin", roles: ["Vice Leader", "Leader - PC Games"], photo: "Zhao Dingjia photo.jpg", telegram: "@Justin_Zha0" },
-  { name: "Xiao Yadan", roles: ["Leader - Mobile Games"], photo: "Xiao Yadan photo.jpg", telegram: "@Angelina_XYD" },
-  { name: "Gary Yang", roles: ["Logistics"], photo: "Gary Yang photo.jpg", telegram: "@Gy_yang" },
+export type CommitteeMember = {
+  name: string;
+  /** Preferred name, shown in brackets after the full name. */
+  preferred?: string;
+  roles: string[];
+  /** File name in public/images/source/. Leave out to show a placeholder until a photo is ready. */
+  photo?: string;
+  telegram: string;
+};
+
+export const committee: CommitteeMember[] = [
+  { name: "Zhao Dingjia", preferred: "Justin", roles: ["Leader", "Leader - PC Games"], photo: "Zhao Dingjia photo.jpg", telegram: "@Justin_Zha0" },
+  { name: "Xiao Yadan", roles: ["Assistant Leader", "Leader - Mobile Games"], photo: "Xiao Yadan photo.jpg", telegram: "@Angelina_XYD" },
+  { name: "Ni Huacheng", roles: ["Leader - Console Games"], telegram: "@MsKHua" },
 ];
 
 // Each tool has an `icon`: one of the names drawn in app/components/ToolIcon.tsx.

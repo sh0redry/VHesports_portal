@@ -9,7 +9,9 @@ export function Committee() {
     </div>
     <div className="committee-grid">
       {committee.map(person => <article className="member-card" key={person.name}>
-        <img src={asset(person.photo)} alt={person.name} />
+        {person.photo
+          ? <img src={asset(person.photo)} alt={person.name} />
+          : <span className="member-photo-empty" aria-hidden="true"><img src={asset("vh-emblem-light.png")} alt="" /></span>}
         <div className="member-info">
           <p>{person.roles.join(" / ")}</p>
           <h2>{person.name}{person.preferred ? ` (${person.preferred})` : ""}</h2>

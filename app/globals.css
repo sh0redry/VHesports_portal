@@ -206,7 +206,7 @@ section, .page { padding-left: clamp(20px, 9vw, 150px); padding-right: clamp(20p
 .tool-card .tool-open { color: var(--accent); font-size: .76rem; font-weight: 850; letter-spacing: .11em; margin-top: auto; text-transform: uppercase; }
 .tool-card:hover .tool-open { color: #fff; }
 
-.committee-grid { display: grid; gap: 18px; grid-template-columns: repeat(2, 1fr); }
+.committee-grid { display: grid; gap: 18px; grid-template-columns: repeat(3, 1fr); }
 .member-card { background: var(--surface); min-height: 440px; overflow: hidden; position: relative; }
 .member-card img { filter: grayscale(.12); height: 100%; object-fit: cover; object-position: center 22%; opacity: .75; position: absolute; transition: transform .4s, opacity .3s; width: 100%; }
 .member-card:hover img { opacity: .95; transform: scale(1.04); }
@@ -490,3 +490,13 @@ h1, h2, h3 { overflow-wrap: break-word; }
 /* Four mobile tools: one row of four on wide screens, two by two on medium ones. */
 @media (min-width: 1100px) { #toolkit-mobile .tool-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 @media (min-width: 821px) and (max-width: 1099px) { #toolkit-mobile .tool-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Committee: placeholder shown until a member's photo is ready */
+.member-photo-empty { align-items: center; background: linear-gradient(150deg, #2a1f4a, #120e1d 70%); display: flex; inset: 0; justify-content: center; padding-bottom: 90px; position: absolute; }
+.member-card .member-photo-empty img { filter: none; height: 150px; opacity: .55; position: static; transform: none; width: auto; }
+.member-card:hover .member-photo-empty img { opacity: .8; transform: none; }
+/* Three members: three columns on desktop, one per row below that (no orphan card). */
+@media (max-width: 820px) { .committee-grid { grid-template-columns: 1fr; } .member-card { min-height: 420px; } }
+/* Keep long names inside the card now that cards are narrower. */
+.member-info { right: 25px; }
+.member-info h2 { font-size: clamp(1.6rem, 2.3vw, 2.5rem); line-height: 1.02; }
