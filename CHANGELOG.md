@@ -6,6 +6,13 @@ A record of every update to vhesports.com, with dates. Newest first.
 
 ## 2026-11-13
 
+### 更换两张游戏封面 / Two game covers replaced
+
+- Super Smash Bros. Ultimate:原封面只有 299×168,放大后发糊。换成 Nintendo 官方商店页的主视觉图(裁切为 640×745)。
+  Super Smash Bros. Ultimate: the old cover was only 299×168 and looked blurry. Replaced with the key art from Nintendo's official store page (cropped to 640×745).
+- VALORANT:原封面是一张被裁掉一半的标志图。换成新的标志封面(640×744):官方红色背景上放 V 形标志和 VALORANT 字标,三样素材都取自 VALORANT 官网。
+  VALORANT: the old cover was a half-cropped logo. Replaced with a new logo cover (640×744): the V mark and the VALORANT wordmark on the official red background, all three taken from the official VALORANT website.
+
 ### Welcome 新闻页排版修正 / Welcome post layout fixes
 
 - 普通新闻页(如 Welcome)的正文原来挤在页面左侧一条 560 像素宽的窄栏里,右边大片空白。现在正文栏宽 820 像素并在页面居中。

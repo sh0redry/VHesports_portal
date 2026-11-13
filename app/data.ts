@@ -7,7 +7,7 @@ export const games = {
     ["Honor of Kings", "mobile honor of king.jpg"],
   ],
   pc: [
-    ["VALORANT", "Valorant.png"],
+    ["VALORANT", "Valorant.jpg"],
     ["Counter-Strike 2", "CS2.jpg"],
   ],
   console: [
