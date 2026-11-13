@@ -6,6 +6,19 @@ A record of every update to vhesports.com, with dates. Newest first.
 
 ## 2026-11-13
 
+### 进入动画 / Entrance animations
+
+- 首页首屏:背景照片缓缓收拢到位,队徽、标题、简介和按钮依次从下方浮现;导航栏在网站打开时从上方滑入。
+  Homepage hero: the background photo settles into place while the emblem, title, intro and button rise in one after another; the navigation bar slides down when the site first opens.
+- 每次打开或切换页面,页面内容淡入并轻微上移;页面顶部的标题区逐行出现。
+  Every page fades in with a slight upward move when it opens, and its heading block arrives line by line.
+- 向下滚动时,首屏以下的卡片、表格和板块在进入视野时依次浮现(同一排的卡片有先后间隔)。
+  While scrolling, cards, tables and sections below the first screen rise in as they come into view, with neighbouring cards slightly staggered.
+- 切换页面时直接回到顶部,不再有滚动动画,以免和淡入效果冲突。
+  Navigating to another page now jumps straight to the top instead of scrolling there, so it does not fight the fade-in.
+- 系统开启 "减少动画" 时,以上动画全部关闭,内容直接显示。
+  With the system "reduce motion" setting on, all of these are switched off and content simply appears.
+
 ### 委员会名单更新 / Committee update
 
 - Zhao Dingjia (Justin) 接任 Leader(原 Vice Leader),继续兼任 Leader - PC Games。

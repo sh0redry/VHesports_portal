@@ -500,3 +500,41 @@ h1, h2, h3 { overflow-wrap: break-word; }
 /* Keep long names inside the card now that cards are narrower. */
 .member-info { right: 25px; }
 .member-info h2 { font-size: clamp(1.6rem, 2.3vw, 2.5rem); line-height: 1.02; }
+
+/* ---- Entrance animations ----
+   All of these only play once as something appears; "backwards" means an element
+   returns to its normal styles afterwards, so hover effects keep working.
+   The reduced-motion rule above switches every one of them off. */
+@keyframes page-in { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes rise-in { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+@keyframes emblem-in { from { opacity: 0; transform: translateY(18px) scale(.86); } to { opacity: 1; transform: none; } }
+@keyframes hero-zoom { from { transform: scale(1.09); } to { transform: none; } }
+@keyframes header-in { from { opacity: 0; transform: translateY(-100%); } to { opacity: 1; transform: none; } }
+
+/* The header slides down once, when the site first opens. */
+.site-header { animation: header-in .6s cubic-bezier(.2, .7, .2, 1) backwards; }
+
+/* Every page fades up as it opens. The homepage only fades, because its hero has its own sequence. */
+main { animation: page-in .55s cubic-bezier(.2, .7, .2, 1) backwards; }
+main:has(> .hero) { animation-name: fade-in; }
+
+/* Homepage hero: the photo settles in while the emblem, title, text and button arrive one after another. */
+.hero::before { animation: hero-zoom 1.9s cubic-bezier(.2, .7, .2, 1) backwards; }
+.hero-copy > * { animation: rise-in .75s cubic-bezier(.2, .7, .2, 1) backwards; }
+.hero-copy > :nth-child(1) { animation-delay: .15s; animation-name: emblem-in; }
+.hero-copy > :nth-child(2) { animation-delay: .28s; }
+.hero-copy > :nth-child(3) { animation-delay: .38s; }
+.hero-copy > :nth-child(4) { animation-delay: .52s; }
+.hero-copy > :nth-child(5) { animation-delay: .64s; }
+
+/* Other pages: the heading block arrives line by line. */
+.page-hero > * { animation: rise-in .65s cubic-bezier(.2, .7, .2, 1) backwards; }
+.page-hero > :nth-child(1) { animation-delay: .08s; }
+.page-hero > :nth-child(2) { animation-delay: .16s; }
+.page-hero > :nth-child(3) { animation-delay: .26s; }
+.page-hero > :nth-child(4) { animation-delay: .36s; }
+
+/* Scroll reveal (classes are added and removed by app/reveal.ts). */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s cubic-bezier(.2, .7, .2, 1), transform .7s cubic-bezier(.2, .7, .2, 1); }
+.reveal.is-visible { opacity: 1; transform: none; }

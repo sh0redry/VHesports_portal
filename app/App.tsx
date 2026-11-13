@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { Fragment, useEffect } from "react";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Committee } from "./pages/Committee";
@@ -10,6 +10,7 @@ import { NotFound } from "./pages/NotFound";
 import { Rulebook } from "./pages/Rulebook";
 import { Toolkit } from "./pages/Toolkit";
 import { Vhcg } from "./pages/Vhcg";
+import { useReveal } from "./reveal";
 import { RouterProvider, titleFor, useRoute } from "./router";
 
 /** Which page to show for each address. To add a page, also list it in siteMeta.json. */
@@ -32,10 +33,12 @@ function pageFor(route: string) {
 export default function App() {
   const { route, go } = useRoute();
   useEffect(() => { document.title = titleFor(route); }, [route]);
+  useReveal(route);
   return <RouterProvider value={go}>
     <div className="site-shell">
       <Header route={route} />
-      {pageFor(route)}
+      {/* The key makes each page mount afresh, so its enter animation plays on every navigation. */}
+      <Fragment key={route}>{pageFor(route)}</Fragment>
       <Footer />
     </div>
   </RouterProvider>;

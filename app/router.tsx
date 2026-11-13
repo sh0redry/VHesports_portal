@@ -49,7 +49,8 @@ export function useRoute() {
   const go: Go = to => {
     window.history.pushState({}, "", to);
     setRoute(isKnown(to) ? to : NOT_FOUND);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    // Jump straight to the top: the new page fades in, so a scrolling animation would only fight it.
+    window.scrollTo({ top: 0, behavior: "instant" });
   };
   return { route, go };
 }
