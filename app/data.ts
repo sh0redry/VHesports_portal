@@ -3,18 +3,18 @@ export const asset = (name: string) => `/images/source/${encodeURIComponent(name
 
 export const games = {
   mobile: [
-    ["Mobile Legends", "Mobile LOL.png"],
-    ["Honor of Kings", "mobile honor of king.png"],
+    ["Mobile Legends", "Mobile LOL.jpg"],
+    ["Honor of Kings", "mobile honor of king.jpg"],
   ],
   pc: [
     ["VALORANT", "Valorant.png"],
-    ["Counter-Strike 2", "CS2.png"],
+    ["Counter-Strike 2", "CS2.jpg"],
   ],
   console: [
-    ["Super Smash Bros. Ultimate", "Super smash bro.png"],
-    ["EA SPORTS FC 26", "FIFA26.png"],
-    ["NBA 2K", "2K.png"],
-    ["Overcooked! 2", "Overcooked2.png"],
+    ["Super Smash Bros. Ultimate", "Super smash bro.jpg"],
+    ["EA SPORTS FC 26", "FIFA26.jpg"],
+    ["NBA 2K", "2K.jpg"],
+    ["Overcooked! 2", "Overcooked2.jpg"],
   ],
 };
 

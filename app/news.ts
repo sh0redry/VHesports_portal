@@ -21,6 +21,8 @@ function field(source: string, name: string) {
 }
 
 export const news: NewsPost[] = Object.entries(markdownFiles)
+  // Normalise Windows line endings so paragraphs split the same on every machine.
+  .map(([path, source]) => [path, source.replace(/\r\n/g, "\n")] as const)
   .map(([path, source]) => ({
     slug: path.split("/").pop()!.replace(/^\d{4}-\d{2}-/, "").replace(/\.md$/, ""),
     title: field(source, "title"),
