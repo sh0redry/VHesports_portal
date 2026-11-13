@@ -1,0 +1,16 @@
+{
+  "siteName": "Valour House E-Sports",
+  "siteUrl": "https://vhesports.com",
+  "defaultTitle": "Valour House E-Sports | NUS",
+  "defaultDescription": "Valour House E-Sports at NUS: play together, compete together, belong together.",
+  "pages": {
+    "/news": { "title": "News", "description": "Announcements, events and stories from the VH E-Sports community." },
+    "/committee": { "title": "Committee", "description": "Meet the team coordinating sessions, tournaments, partnerships and our gaming divisions." },
+    "/vhcg": { "title": "VHCG", "description": "Valour House Cluster Games AY 2026/27: final standings, match records, top players and rulebooks." },
+    "/vhcg/match-records": { "title": "VHCG Match Records", "description": "Official match results for Valour House Cluster Games AY 2026/27." },
+    "/vhcg/mlbb-rules": { "title": "VHCG MLBB Rulebook", "description": "Detailed schedule, format and rules for the VHCG Mobile Legends: Bang Bang competition." },
+    "/vhcg/valorant-rules": { "title": "VHCG VALORANT Rulebook", "description": "Detailed schedule, format and rules for the VHCG VALORANT competition." },
+    "/toolkit": { "title": "Player Toolkit", "description": "A curated set of tools for planning, training and tuning your gaming setup." },
+    "/join": { "title": "Join Us", "description": "Join the VH E-Sports Telegram community for sessions, events and tournaments." }
+  }
+}

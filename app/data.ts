@@ -127,37 +127,50 @@ export const valorantMatchRecords = [
   { match: 10, day: "Day 2", date: "18 Oct 2026 (Sunday)", time: "16:00-17:00", team1: "Cluster 3", score1: 6, score2: 13, team2: "Cluster 5" },
 ].map(match => ({ ...match, winner: match.score1 > match.score2 ? match.team1 : match.team2, winMargin: Math.abs(match.score1 - match.score2) }));
 
-export const valorantStandings = [
-  { rank: 1, cluster: "Cluster 5", points: 10 },
-  { rank: 2, cluster: "Cluster 2", points: 7 },
-  { rank: 3, cluster: "Cluster 1", points: 5 },
-  { rank: 4, cluster: "Cluster 3", points: 3 },
-  { rank: 5, cluster: "Cluster 4", points: 1 },
-].map(entry => {
-  const matches = valorantMatchRecords.filter(match => match.team1 === entry.cluster || match.team2 === entry.cluster);
-  const won = matches.filter(match => match.winner === entry.cluster).length;
-  const roundsWon = matches.reduce((total, match) => total + (match.team1 === entry.cluster ? match.score1 : match.score2), 0);
-  const roundsLost = matches.reduce((total, match) => total + (match.team1 === entry.cluster ? match.score2 : match.score1), 0);
-  return { ...entry, played: matches.length, won, lost: matches.length - won, roundsWon, roundsLost, roundDiff: roundsWon - roundsLost };
-});
-
 export const mlbbTieBreakerRecords = [
   { match: 1, date: "25 Oct 2026 (Sunday)", team1: "Cluster 1", score1: 28, score2: 10, team2: "Cluster 2", winner: "Cluster 1" },
   { match: 2, date: "25 Oct 2026 (Sunday)", team1: "Cluster 2", score1: 8, score2: 12, team2: "Cluster 4", winner: "Cluster 4" },
   { match: 3, date: "25 Oct 2026 (Sunday)", team1: "Cluster 4", score1: 3, score2: 18, team2: "Cluster 1", winner: "Cluster 1" },
 ];
 
-// Confirmed overall ranks after the 25 October MLBB tie-breakers.
-// Tie-breakers resolve overall rank without changing either game's placement points.
-export const vhcgStandings = [
-  { rank: 3, cluster: "Cluster 1", mlbbPoints: 3 },
-  { rank: 5, cluster: "Cluster 2", mlbbPoints: 1 },
-  { rank: 2, cluster: "Cluster 3", mlbbPoints: 10 },
-  { rank: 4, cluster: "Cluster 4", mlbbPoints: 7 },
-  { rank: 1, cluster: "Cluster 5", mlbbPoints: 5 },
-].map(entry => ({ ...entry, valorantPoints: valorantStandings.find(team => team.cluster === entry.cluster)!.points }))
-  .map(entry => ({ ...entry, totalPoints: entry.mlbbPoints + entry.valorantPoints }))
-  .sort((a, b) => a.rank - b.rank);
+export const clusters = ["Cluster 1", "Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5"];
+
+/** Points awarded for finishing 1st, 2nd, 3rd, 4th and 5th in each game. */
+const placementPoints = [10, 7, 5, 3, 1];
+
+const winsIn = (records: { winner: string }[], cluster: string) => records.filter(match => match.winner === cluster).length;
+
+/**
+ * Placement points per cluster for one game, worked out from the match records above:
+ * the cluster with the most round-robin wins places first.
+ * (If two clusters ever finish a game with the same number of wins, the rulebook's
+ * tie-break rules decide the order and it has to be set here by hand.)
+ */
+function gamePoints(records: { winner: string }[]) {
+  const ranked = [...clusters].sort((a, b) => winsIn(records, b) - winsIn(records, a));
+  return Object.fromEntries(ranked.map((cluster, index) => [cluster, placementPoints[index]]));
+}
+const mlbbPoints = gamePoints(mlbbMatchRecords);
+const valorantPoints = gamePoints(valorantMatchRecords);
+
+/**
+ * Overall standings: total points first, then wins in the MLBB tie-breakers.
+ * Tie-breakers resolve overall rank without changing either game's placement points.
+ */
+export const vhcgStandings = clusters
+  .map(cluster => ({
+    cluster,
+    mlbbPoints: mlbbPoints[cluster],
+    valorantPoints: valorantPoints[cluster],
+    totalPoints: mlbbPoints[cluster] + valorantPoints[cluster],
+    tieBreakWins: winsIn(mlbbTieBreakerRecords, cluster),
+  }))
+  .sort((a, b) => b.totalPoints - a.totalPoints || b.tieBreakWins - a.tieBreakWins)
+  .map((entry, index) => ({ ...entry, rank: index + 1 }));
+
+// These two notes describe the results in words. Update them whenever the records above change.
+export const vhcgStandingsNote = "Final overall standings confirmed after the MLBB tie-breakers on 25 October 2026. Cluster 1, Cluster 4 and Cluster 2 finished 3rd, 4th and 5th respectively, each with 8 points. Tie-breakers resolved their ranks without changing placement points.";
+export const mlbbTieBreakerNote = "Tie-breaker results: Cluster 1 won 2 matches, Cluster 4 won 1, and Cluster 2 won 0. Final overall places: 3rd — Cluster 1; 4th — Cluster 4; 5th — Cluster 2. Each retains 8 overall points.";
 
 export const valorantSchedule = [
   ["17 Oct 2026 (Saturday)", "11:45-12:00", "VALORANT Day 1 check-in and technical setup"],
@@ -175,11 +188,9 @@ export const valorantSchedule = [
   ["18 Oct 2026 (Sunday)", "17:00-18:00", "Final results confirmation / tie-break arrangement if required"],
 ];
 
-export const icg = {
-  clusters: ["Cluster 1", "Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5"],
-  scoring: [
-    ["1st place", "10"], ["2nd place", "7"], ["3rd place", "5"], ["4th place", "3"], ["5th place", "1"],
-  ],
+export const vhcg = {
+  clusters,
+  scoring: ["1st place", "2nd place", "3rd place", "4th place", "5th place"].map((place, index) => [place, String(placementPoints[index])]),
   schedule: [
     ["11 Oct 2026 (Sunday)", "17:15-17:30", "MLBB registration, device and network check"],
     ["11 Oct 2026 (Sunday)", "17:30-20:15", "MLBB Round-Robin Rounds 1-5 (10 matches; two matches may run concurrently)"],

@@ -6,6 +6,34 @@ A record of every update to vhesports.com, with dates. Newest first.
 
 ## 2026-11-13
 
+### 第四批优化:代码重构 / Upgrade batch 4: code restructuring
+
+这一批主要是内部整理,页面外观和文字基本不变。
+This batch is mostly internal clean-up; the pages look and read almost the same.
+
+- 把原来写在一个文件里的整个网站拆成每页一个文件(`app/pages/`)、公共部分(`app/components/`)和特殊排版的新闻(`app/articles/`)。
+  Split the site, previously written in a single file, into one file per page (`app/pages/`), shared parts (`app/components/`) and news posts with a hand-built layout (`app/articles/`).
+- 新闻现在支持标准 Markdown:标题、加粗、斜体、链接、列表和图片。以后发新闻只需要在 `src/content/news/` 加一个文本文件,写法见 README。
+  News posts now support standard Markdown: headings, bold, italic, links, lists and images. Publishing a post only needs a text file in `src/content/news/`; see the README for the format.
+- 普通新闻页不再把摘要在正文里重复显示一遍。
+  Standard news pages no longer repeat the summary a second time in the body.
+- VHCG 积分榜的各项得分和名次改为根据比赛记录自动计算,不再手动填写(计算结果与之前完全一致)。
+  VHCG placement points and overall ranks are now calculated from the match records instead of typed in by hand (the results are identical to before).
+- 颜色统一为主题变量,放在 `app/globals.css` 顶部,以后换主题色只需改一处。
+  Colours are now theme variables at the top of `app/globals.css`, so a theme colour can be changed in one place.
+- 新闻卡片、入口卡片和站内按钮改为真正的链接,可以右键 "在新标签页打开"。
+  News cards, portal cards and in-site buttons are now real links, so "open in new tab" works.
+- 修复透明边框按钮(如 "View all")显示成灰白底的问题。
+  Fixed outline buttons (such as "View all") showing a grey-white fill.
+- 无障碍改进:键盘操作时显示焦点框;尊重系统的 "减少动画" 设置。
+  Accessibility: keyboard focus is now visible, and the system "reduce motion" setting is respected.
+- 构建时为每个页面生成独立文件,带各自的标题和简介,并生成 `sitemap.xml` 和 `robots.txt`。直接打开或分享子页面时不再先返回 404,搜索引擎也能收录各个页面。
+  The build now writes a separate file for every page with its own title and description, plus `sitemap.xml` and `robots.txt`. Opening or sharing a sub-page no longer returns a 404 first, and search engines can index each page.
+- 升级部署流程使用的 GitHub Actions 版本(checkout v7、setup-node v7、upload-pages-artifact v5、deploy-pages v5),消除弃用警告。
+  Upgraded the GitHub Actions used for deployment (checkout v7, setup-node v7, upload-pages-artifact v5, deploy-pages v5) to clear the deprecation warnings.
+- 重写 README,说明各类内容在哪里改、怎么发新闻、怎么加页面。
+  Rewrote the README to explain where each kind of content lives, how to publish a news post and how to add a page.
+
 ### 第一批优化:加载速度与问题修复 / Upgrade batch 1: loading speed and fixes
 
 - 压缩网站图片:首页背景图从 4.4 MB 降到 0.26 MB,图片目录总计从 35 MB 降到 2.7 MB。部分 PNG 改存为 JPG(游戏封面、轮播图、嘉年华截图)。

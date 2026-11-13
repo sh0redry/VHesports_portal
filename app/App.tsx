@@ -1,0 +1,42 @@
+import { useEffect } from "react";
+import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
+import { Committee } from "./pages/Committee";
+import { Home } from "./pages/Home";
+import { Join } from "./pages/Join";
+import { MatchRecords } from "./pages/MatchRecords";
+import { Article, News } from "./pages/News";
+import { NotFound } from "./pages/NotFound";
+import { Rulebook } from "./pages/Rulebook";
+import { Toolkit } from "./pages/Toolkit";
+import { Vhcg } from "./pages/Vhcg";
+import { RouterProvider, titleFor, useRoute } from "./router";
+
+/** Which page to show for each address. To add a page, also list it in siteMeta.json. */
+function pageFor(route: string) {
+  if (route.startsWith("/news/")) return <Article slug={route.slice(6)} />;
+  switch (route) {
+    case "/": return <Home />;
+    case "/news": return <News />;
+    case "/committee": return <Committee />;
+    case "/vhcg": return <Vhcg />;
+    case "/vhcg/match-records": return <MatchRecords />;
+    case "/vhcg/mlbb-rules": return <Rulebook game="MLBB" />;
+    case "/vhcg/valorant-rules": return <Rulebook game="VALORANT" />;
+    case "/toolkit": return <Toolkit />;
+    case "/join": return <Join />;
+    default: return <NotFound />;
+  }
+}
+
+export default function App() {
+  const { route, go } = useRoute();
+  useEffect(() => { document.title = titleFor(route); }, [route]);
+  return <RouterProvider value={go}>
+    <div className="site-shell">
+      <Header route={route} />
+      {pageFor(route)}
+      <Footer />
+    </div>
+  </RouterProvider>;
+}
