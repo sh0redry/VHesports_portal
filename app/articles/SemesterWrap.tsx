@@ -10,7 +10,7 @@ export function SemesterWrap({ item }: { item: NewsPost }) {
     </figure>
     <section className="semester-wrap-message">
       <p className="section-kicker">SEMESTER FINALE / 6 NOVEMBER 2026</p>
-      <h2>Thank you, Bella. 💛</h2>
+      <h2>Good games, everyone. 💛</h2>
       {blocksOf(item).slice(1).map(paragraph => <p key={paragraph}>{paragraph}</p>)}
     </section>
   </ArticleShell>;

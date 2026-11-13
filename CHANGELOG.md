@@ -10,6 +10,8 @@ A record of every update to vhesports.com, with dates. Newest first.
 
 - 学期收尾那篇新闻的标题由 "Good Games, Great Chicken. Thank You, Bella!" 改为 "Good Games, Great Chicken"。对 Bella 的感谢保留在正文里。
   The semester wrap-up post's title changed from "Good Games, Great Chicken. Thank You, Bella!" to "Good Games, Great Chicken". The thanks to Bella stays in the article text.
+- 同一篇文章内页的小标题由 "Thank you, Bella. 💛" 改为 "Good games, everyone. 💛"。
+  The subheading inside the same article changed from "Thank you, Bella. 💛" to "Good games, everyone. 💛".
 
 ### 更换两张游戏封面 / Two game covers replaced
 
