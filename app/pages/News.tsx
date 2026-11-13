@@ -1,5 +1,6 @@
 import { customArticles } from "../articles";
 import { ArticleShell } from "../articles/ArticleShell";
+import { NewsCover } from "../components/NewsCover";
 import { telegramUrl } from "../data";
 import { Markdown } from "../markdown";
 import { blocksOf, news } from "../news";
@@ -16,8 +17,9 @@ export function News() {
     <div className="news-list">
       {news.map(item => <Link className="news-row" to={`/news/${item.slug}`} key={item.slug}>
         <span>{item.tag}<br />{item.date}</span>
+        <NewsCover item={item} />
         <div><h2>{item.title}</h2><p>{item.excerpt}</p></div>
-        <b>-&gt;</b>
+        <b>→</b>
       </Link>)}
     </div>
   </main>;
@@ -39,6 +41,6 @@ export function Article({ slug }: { slug: string }) {
     <Markdown blocks={blocksOf(item).slice(1)} />
     <h2>Stay connected</h2>
     <p>Join our Telegram community to receive the latest updates, meet other players, and take part in future sessions and events.</p>
-    <a className="button primary" href={telegramUrl} target="_blank" rel="noreferrer">Open Telegram -&gt;</a>
+    <a className="button primary" href={telegramUrl} target="_blank" rel="noreferrer">Open Telegram →</a>
   </ArticleShell>;
 }

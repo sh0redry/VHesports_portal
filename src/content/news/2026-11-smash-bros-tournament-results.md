@@ -2,6 +2,7 @@
 title: 🏆 SMASH BROS TOURNAMENT RESULTS 🏆
 date: NOV 2026
 tag: TOURNAMENT RESULTS
+cover: smash-tournament-group.jpg
 order: 30
 ---
 

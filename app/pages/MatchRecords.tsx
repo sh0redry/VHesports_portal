@@ -3,7 +3,7 @@ import { Link } from "../router";
 
 export function MatchRecords() {
   return <main className="page match-records">
-    <Link className="button ghost" to="/vhcg">&lt;- Back to VHCG</Link>
+    <Link className="button ghost" to="/vhcg">← Back to VHCG</Link>
     <div className="page-hero">
       <p className="eyebrow">VHCG E-SPORTS</p>
       <h1>Match<br /><em>Records.</em></h1>

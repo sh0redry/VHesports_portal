@@ -6,6 +6,8 @@ export type NewsPost = {
   date: string;
   tag: string;
   order: number;
+  /** Optional cover photo: a file name in public/images/source/. */
+  cover: string;
   /** Short summary shown on cards and under the article title. */
   excerpt: string;
   /** Everything after the front matter, as Markdown. The first paragraph is the excerpt. */
@@ -39,6 +41,7 @@ function parse(path: string, rawSource: string): NewsPost {
     date: field("date"),
     tag: field("tag"),
     order: Number(field("order")) || 0,
+    cover: field("cover"),
     excerpt: field("excerpt") || plainText(body.split(/\n{2,}/)[0] || ""),
     body,
   };

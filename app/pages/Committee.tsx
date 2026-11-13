@@ -8,12 +8,12 @@ export function Committee() {
       <p className="lede">Meet the team coordinating sessions, tournaments, partnerships and our gaming divisions.</p>
     </div>
     <div className="committee-grid">
-      {committee.map((person, index) => <article className={index < 2 ? "member-card featured" : "member-card"} key={person.name}>
+      {committee.map(person => <article className="member-card" key={person.name}>
         <img src={asset(person.photo)} alt={person.name} />
         <div className="member-info">
           <p>{person.roles.join(" / ")}</p>
           <h2>{person.name}{person.preferred ? ` (${person.preferred})` : ""}</h2>
-          <small>Telegram: {person.telegram}</small>
+          <small>Telegram: <a href={`https://t.me/${person.telegram.replace(/^@/, "")}`} target="_blank" rel="noopener noreferrer">{person.telegram}</a></small>
         </div>
       </article>)}
     </div>

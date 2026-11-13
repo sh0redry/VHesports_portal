@@ -11,7 +11,7 @@ export function Footer() {
         <Link to="/vhcg">VHCG</Link>
         <Link to="/toolkit">Player Toolkit</Link>
         <Link to="/join">Join Us</Link>
-        <a href={telegramUrl} target="_blank" rel="noreferrer">Telegram -&gt;</a>
+        <a href={telegramUrl} target="_blank" rel="noreferrer">Telegram →</a>
       </div>
     </div>
     <div className="footer-bottom">

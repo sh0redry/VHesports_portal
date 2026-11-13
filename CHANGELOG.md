@@ -6,6 +6,29 @@ A record of every update to vhesports.com, with dates. Newest first.
 
 ## 2026-11-13
 
+### 第二批优化:视觉和体验 / Upgrade batch 2: look and feel
+
+- 品牌色:保留荧光绿为主色,把队徽的紫色定为统一的辅助色(首页光晕、卡片标签、新闻占位图、页脚分隔线等)。
+  Brand colours: lime stays the main colour, and the logo's purple is now the consistent secondary colour (hero glow, card labels, news placeholders, footer divider and more).
+- 队徽:导航栏和首页改用提亮后的纯图形队徽,在深色背景上清晰可见;首页不再使用白色底牌。网站图标改为深色底上的浅色队徽。
+  Logo: the header and homepage now use a brightened, emblem-only version that reads clearly on the dark background; the white plaque on the homepage is gone. The site icon is now the light emblem on a dark tile.
+- 首页精简:"介绍" 和 "使命" 合并为一个板块;去掉与导航栏重复的四张入口卡片;"最新新闻" 提前到第二屏,只显示最近 3 篇。
+  Leaner homepage: the intro and mission sections are merged; the four portal cards that duplicated the navigation are removed; Latest News moves up and shows only the three most recent posts.
+- 游戏板块:三个分类合并为一个 "Games we play" 板块,8 个游戏排满两行,每张卡片标注平台(Mobile / PC / Console)。
+  Games: the three categories are merged into one "Games we play" section, eight games filling two rows, each card labelled with its platform (Mobile / PC / Console).
+- 轮播图:图片更亮,每 6 秒自动切换(系统开启 "减少动画" 时不自动切换)。
+  Highlights: brighter images, and the slides now advance every 6 seconds (not when the system "reduce motion" setting is on).
+- 新闻配图:新闻卡片和新闻列表显示封面图;没有封面的文章显示紫色队徽占位图。封面在文章文件里用 `cover:` 指定。
+  News covers: news cards and the news list now show a cover photo; posts without one show a purple emblem tile. A cover is set with `cover:` in the post file.
+- 委员会页:改为整齐的两列排版;Telegram 账号可以直接点击。
+  Committee page: a tidy two-column layout; Telegram handles are now clickable.
+- 手机端:菜单按钮加大到 44×44 并换成标准的三横线图标;全站的 `->` 字符换成真正的箭头 →。
+  Mobile: the menu button is now 44×44 with a standard three-bar icon; the `->` characters across the site are now real arrows →.
+- 表格:VHCG 积分榜在手机上完整显示,不用横向滑动(表头简化为 MLBB / VALORANT / Total);Top 5 表格在电脑上完整显示;其余较宽的表格在手机上提示 "可横向滑动"。
+  Tables: the VHCG standings fit on a phone without sideways scrolling (headers shortened to MLBB / VALORANT / Total); the Top 5 table fits on desktop; other wide tables show a "swipe sideways" hint on phones.
+- 字体:Inter 字体随网站一起加载,所有设备上显示一致。
+  Font: the Inter typeface now ships with the site, so it looks the same on every device.
+
 ### 第四批优化:代码重构 / Upgrade batch 4: code restructuring
 
 这一批主要是内部整理,页面外观和文字基本不变。

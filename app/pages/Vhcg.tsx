@@ -50,7 +50,7 @@ export function Vhcg() {
       </div>
       <div className="standings-table-wrap">
         <table className="standings-table">
-          <thead><tr><th>Rank</th><th>Cluster</th><th>MLBB Points</th><th>VALORANT Points</th><th>Total Points</th></tr></thead>
+          <thead><tr><th>Rank</th><th>Cluster</th><th>MLBB</th><th>VALORANT</th><th>Total</th></tr></thead>
           <tbody>
             {vhcgStandings.map(entry => <tr key={entry.cluster}><td>{entry.rank}</td><td>{entry.cluster}</td><td>{entry.mlbbPoints}</td><td>{entry.valorantPoints}</td><td>{entry.totalPoints}</td></tr>)}
           </tbody>
@@ -58,7 +58,7 @@ export function Vhcg() {
       </div>
       <p className="standings-note">{vhcgStandingsNote}</p>
       <div className="scoring-strip">{vhcg.scoring.map(([place, points]) => <div key={place}><strong>{place}</strong><span>{points} points</span></div>)}</div>
-      <Link className="button ghost" to="/vhcg/match-records">View Match Records -&gt;</Link>
+      <Link className="button ghost" to="/vhcg/match-records">View Match Records →</Link>
     </section>
 
     <ValorantTopPlayers />
@@ -90,8 +90,8 @@ export function Vhcg() {
       <h2>Detailed Rulebooks</h2>
       <p className="lede">The game-specific rulebooks used for the AY 2026/27 competition.</p>
       <div className="rule-actions">
-        <Link className="button primary" to="/vhcg/mlbb-rules">MLBB Detailed Rules -&gt;</Link>
-        <Link className="button ghost" to="/vhcg/valorant-rules">VALORANT Detailed Rules -&gt;</Link>
+        <Link className="button primary" to="/vhcg/mlbb-rules">MLBB Detailed Rules →</Link>
+        <Link className="button ghost" to="/vhcg/valorant-rules">VALORANT Detailed Rules →</Link>
       </div>
     </section>
 
@@ -101,7 +101,7 @@ export function Vhcg() {
         <h2>Thank you for playing.</h2>
         <p>Thank you to every player, captain and referee who took part. Join our Telegram community to hear about the next competition.</p>
       </div>
-      <a className="button primary" href={telegramUrl} target="_blank" rel="noopener noreferrer">Join Telegram -&gt;</a>
+      <a className="button primary" href={telegramUrl} target="_blank" rel="noopener noreferrer">Join Telegram →</a>
     </section>
   </main>;
 }

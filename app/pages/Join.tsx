@@ -11,7 +11,7 @@ export function Join() {
       <div className="join-panel">
         <h2>Join our Telegram community.</h2>
         <p>Receive session announcements, event updates and tournament information, then connect with players across Valour House.</p>
-        <a className="button primary" href={telegramUrl} target="_blank" rel="noreferrer">Open Telegram -&gt;</a>
+        <a className="button primary" href={telegramUrl} target="_blank" rel="noreferrer">Open Telegram →</a>
         <div className="expect-grid">
           <div><b>MULTIPLE GAMES</b><span>PC and mobile communities.</span></div>
           <div><b>SESSIONS</b><span>Casual and organised play.</span></div>

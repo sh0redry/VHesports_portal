@@ -8,8 +8,8 @@ export function NotFound() {
       <p className="lede">This page does not exist or may have been moved. Head back to the homepage or check the latest news.</p>
     </div>
     <div className="rule-actions">
-      <Link className="button primary" to="/">Back to Home -&gt;</Link>
-      <Link className="button ghost" to="/news">Latest News -&gt;</Link>
+      <Link className="button primary" to="/">Back to Home →</Link>
+      <Link className="button ghost" to="/news">Latest News →</Link>
     </div>
   </main>;
 }

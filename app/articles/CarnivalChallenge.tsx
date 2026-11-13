@@ -13,7 +13,7 @@ export function CarnivalChallenge({ item }: { item: NewsPost }) {
         <p className="section-kicker">REACTION TIME CHALLENGE</p>
         <h2>⚡ How fast can you react?</h2>
         <p>Take on the <b>Human Benchmark Reaction Time Test</b> and see how quickly you can respond when the screen changes.</p>
-        <a className="text-link" href="https://humanbenchmark.com/" target="_blank" rel="noopener noreferrer">Try the Reaction Time Test -&gt;</a>
+        <a className="text-link" href="https://humanbenchmark.com/" target="_blank" rel="noopener noreferrer">Try the Reaction Time Test →</a>
       </div>
       <img src={asset("reaction-time-challenge.png")} alt="Reaction Time Challenge" />
     </section>
@@ -31,7 +31,7 @@ export function CarnivalChallenge({ item }: { item: NewsPost }) {
       <p className="section-kicker">COMPLETE A CHALLENGE, GET A REWARD</p>
       <h2>🍬 Play. Join. Collect.</h2>
       <p><b>Take part in one of our challenges</b> and <b>join the VH E-Sports Telegram community</b> to receive a small reward!</p>
-      <a className="button dark" href={telegramUrl} target="_blank" rel="noopener noreferrer">Join Telegram -&gt;</a>
+      <a className="button dark" href={telegramUrl} target="_blank" rel="noopener noreferrer">Join Telegram →</a>
     </section>
 
     <section className="carnival-leaderboard">

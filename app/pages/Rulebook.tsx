@@ -4,7 +4,7 @@ import { rulebooks } from "../vhcgRulebooks";
 export function Rulebook({ game }: { game: "MLBB" | "VALORANT" }) {
   const book = rulebooks[game];
   return <main className="page rulebook">
-    <Link className="button ghost" to="/vhcg">&lt;- Back to VHCG</Link>
+    <Link className="button ghost" to="/vhcg">← Back to VHCG</Link>
     <div className="page-hero">
       <p className="eyebrow">VHCG E-SPORTS / OFFICIAL RULES</p>
       <h1>{book.title}<br /><em>Rulebook.</em></h1>

@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { NewsCover } from "../components/NewsCover";
 import { asset, games } from "../data";
 import { news } from "../news";
 import { Link } from "../router";
@@ -9,65 +10,62 @@ const highlights = [
   ["pc game4.jpg", "Play. Learn. Compete.", "Casual sessions, team play and community competition."],
 ];
 
-const portalLinks = [["Latest News", "/news"], ["Leadership Committee", "/committee"], ["Valour House Cluster Games", "/vhcg"], ["Join Us", "/join"]];
+/** How long each highlight stays on screen before the next one, in milliseconds. */
+const highlightInterval = 6000;
 
-function GameGrid({ title, items, alt = false }: { title: string; items: string[][]; alt?: boolean }) {
-  return <section className={alt ? "game-section alt" : "game-section"}>
-    <div className="section-heading">
-      <div><p className="section-kicker">GAME DIVISION</p><h2>{title}</h2></div>
-      <p>Find people to play with, learn from and compete alongside.</p>
+const allGames = [
+  ...games.mobile.map(([name, image]) => ({ name, image, platform: "Mobile" })),
+  ...games.pc.map(([name, image]) => ({ name, image, platform: "PC" })),
+  ...games.console.map(([name, image]) => ({ name, image, platform: "Console" })),
+];
+
+function Highlights() {
+  const [slide, setSlide] = useState(0);
+  const count = highlights.length;
+  const [image, title, copy] = highlights[slide];
+
+  // Advance automatically; the timer restarts whenever the slide changes (including by hand).
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const timer = window.setTimeout(() => setSlide((slide + 1) % count), highlightInterval);
+    return () => window.clearTimeout(timer);
+  }, [slide, count]);
+
+  return <section className="highlights">
+    <div className="section-top">
+      <div><p className="section-kicker">COMMUNITY HIGHLIGHTS</p><h2>Made to play<br />together.</h2></div>
+      <div className="slider-controls">
+        <button onClick={() => setSlide((slide + count - 1) % count)} aria-label="Previous highlight">←</button>
+        <button onClick={() => setSlide((slide + 1) % count)} aria-label="Next highlight">→</button>
+      </div>
     </div>
-    <div className="game-grid">
-      {items.map(([name, image]) => <article className="game-card" key={name}><img src={asset(image)} alt={name} loading="lazy" decoding="async" /><span>{name}</span></article>)}
-    </div>
+    <article className="highlight-frame">
+      <img className="highlight-image" src={asset(image)} alt="VH E-Sports activity" loading="lazy" decoding="async" key={image} />
+      <div className="highlight-copy"><span className="highlight-label">0{slide + 1} / 0{count}</span><h3>{title}</h3><p>{copy}</p></div>
+    </article>
   </section>;
 }
 
 export function Home() {
-  const [slide, setSlide] = useState(0);
-  const [image, title, copy] = highlights[slide];
-  const count = highlights.length;
   return <main>
     <section className="hero">
       <div className="hero-glow" />
+      <div className="hero-glow hero-glow-purple" />
       <div className="hero-copy">
-        <div className="hero-logo-plaque"><img className="hero-brand-logo" src={asset("VH ES Logo.png")} alt="Valour House E-Sports logo" /></div>
+        <img className="hero-emblem" src={asset("vh-emblem-light.png")} alt="Valour House E-Sports emblem" width="443" height="480" />
         <p className="eyebrow">VALOUR HOUSE / NUS</p>
         <h1>Play<br /><em>Together.</em></h1>
         <p className="hero-text">A welcoming esports community for every game, platform and skill level.</p>
-        <Link className="button primary" to="/join">Join Our Community -&gt;</Link>
+        <Link className="button primary" to="/join">Join Our Community →</Link>
       </div>
     </section>
-
-    <section className="intro">
-      <div><p className="section-kicker">ONE COMMUNITY, DIFFERENT GAMES</p><h2>Find your people.<br />Play your game.</h2></div>
-      <p>VH E-Sports brings together players across Valour House. Whether you play competitively, casually, or want to try something new, there is a place for you here.</p>
-    </section>
-
-    <section className="highlights">
-      <div className="section-top">
-        <div><p className="section-kicker">COMMUNITY HIGHLIGHTS</p><h2>Made to play<br />together.</h2></div>
-        <div className="slider-controls">
-          <button onClick={() => setSlide((slide + count - 1) % count)} aria-label="Previous highlight">&lt;-</button>
-          <button onClick={() => setSlide((slide + 1) % count)} aria-label="Next highlight">-&gt;</button>
-        </div>
-      </div>
-      <article className="highlight-frame">
-        <img className="highlight-image" src={asset(image)} alt="VH E-Sports activity" loading="lazy" decoding="async" />
-        <div className="highlight-copy"><span className="highlight-label">0{slide + 1} / 0{count}</span><h3>{title}</h3><p>{copy}</p></div>
-      </article>
-    </section>
-
-    <GameGrid title="Mobile Games" items={games.mobile} />
-    <GameGrid title="PC Games" items={games.pc} alt />
-    <GameGrid title="Console Games" items={games.console} />
 
     <section className="mission">
       <div className="mission-inner">
         <div>
-          <p className="section-kicker">OUR MISSION</p>
+          <p className="section-kicker">ONE COMMUNITY, DIFFERENT GAMES</p>
           <h2>Different games.<br /><span>One house.</span></h2>
-          <p>We are building a diverse and friendly gaming community where platforms, backgrounds, skill levels and gaming cultures meet.</p>
+          <p>VH E-Sports brings together players across Valour House. Whether you play competitively, casually, or want to try something new, there is a place for you here.</p>
         </div>
         <ul className="mission-list"><li>Play together</li><li>Compete together</li><li>Belong together</li></ul>
       </div>
@@ -76,27 +74,38 @@ export function Home() {
     <section className="news-preview">
       <div className="section-top">
         <div><p className="section-kicker">WHAT IS HAPPENING</p><h2>Latest news</h2></div>
-        <Link className="button ghost" to="/news">View all -&gt;</Link>
+        <Link className="button ghost" to="/news">View all →</Link>
       </div>
       <div className="news-grid">
-        {news.map(item => <Link className="news-card" to={`/news/${item.slug}`} key={item.slug}>
+        {news.slice(0, 3).map(item => <Link className="news-card" to={`/news/${item.slug}`} key={item.slug}>
+          <NewsCover item={item} />
           <span className="news-meta">{item.tag} / {item.date}</span>
           <h3>{item.title}</h3>
           <p>{item.excerpt}</p>
-          <b className="news-arrow">-&gt;</b>
+          <b className="news-arrow">→</b>
         </Link>)}
       </div>
     </section>
 
-    <section className="portal">
-      <div className="portal-grid">
-        {portalLinks.map(([label, to], index) => <Link className="portal-card" to={to} key={label}><span className="portal-number">0{index + 1}</span><strong>{label}</strong></Link>)}
+    <Highlights />
+
+    <section className="game-section">
+      <div className="section-heading">
+        <div><p className="section-kicker">GAME DIVISIONS</p><h2>Games we play</h2></div>
+        <p>Mobile, PC and console. Find people to play with, learn from and compete alongside.</p>
+      </div>
+      <div className="game-grid">
+        {allGames.map(game => <article className="game-card" key={game.name}>
+          <img src={asset(game.image)} alt={game.name} loading="lazy" decoding="async" />
+          <small className="game-platform">{game.platform}</small>
+          <span>{game.name}</span>
+        </article>)}
       </div>
     </section>
 
     <section className="join-cta">
       <div><p className="eyebrow">YOUR NEXT GAME STARTS HERE</p><h2>Find your team.<br />Join the community.</h2></div>
-      <Link className="button primary" to="/join">Join VH E-Sports -&gt;</Link>
+      <Link className="button primary" to="/join">Join VH E-Sports →</Link>
     </section>
   </main>;
 }

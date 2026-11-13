@@ -28,6 +28,7 @@ title: Winter Cup Results
 date: DEC 2026
 tag: RESULTS
 order: 50
+cover: winter-cup.jpg
 ---
 
 The first paragraph is the summary shown on cards and under the title.
@@ -42,7 +43,8 @@ Normal text with **bold**, *italic* and a [link](https://example.com).
 ![Description of the photo](winter-cup.jpg "Optional caption")
 ```
 
-- `order`: a higher number appears first in the news list.
+- `order`: a higher number appears first in the news list. The homepage shows the first three.
+- `cover` (optional): the photo shown on news cards. Without it, a purple tile with the emblem is shown.
 - Images go in `public/images/source/` and are referred to by file name. Keep photos under about 300 KB (1600 px wide JPG is plenty).
 - No code change is needed. A post only needs an entry in `app/articles/index.ts` if it uses a special hand-built layout.
 

@@ -14,7 +14,7 @@ export function Toolkit() {
           {category.tools.map(tool => <article className="tool-card" key={tool.name}>
             <h3>{tool.name}</h3>
             <p>{tool.description}</p>
-            <a href={tool.url} target="_blank" rel="noopener noreferrer">Open Tool -&gt;</a>
+            <a href={tool.url} target="_blank" rel="noopener noreferrer">Open Tool →</a>
           </article>)}
         </div>
       </section>)}

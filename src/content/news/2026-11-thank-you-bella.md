@@ -2,6 +2,7 @@
 title: Good Games, Great Chicken. Thank You, Bella!
 date: 6 NOV 2026
 tag: COMMUNITY
+cover: bella-semester-wrap-up.jpg
 order: 40
 ---
 
