@@ -6,6 +6,11 @@ A record of every update to vhesports.com, with dates. Newest first.
 
 ## 2026-11-13
 
+### 新闻标题修改 / News title changed
+
+- 学期收尾那篇新闻的标题由 "Good Games, Great Chicken. Thank You, Bella!" 改为 "Good Games, Great Chicken"。对 Bella 的感谢保留在正文里。
+  The semester wrap-up post's title changed from "Good Games, Great Chicken. Thank You, Bella!" to "Good Games, Great Chicken". The thanks to Bella stays in the article text.
+
 ### 更换两张游戏封面 / Two game covers replaced
 
 - Super Smash Bros. Ultimate:原封面只有 299×168,放大后发糊。换成 Nintendo 官方商店页的主视觉图(裁切为 640×745)。

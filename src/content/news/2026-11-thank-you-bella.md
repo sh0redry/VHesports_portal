@@ -1,5 +1,5 @@
 ---
-title: Good Games, Great Chicken. Thank You, Bella!
+title: Good Games, Great Chicken
 date: 6 NOV 2026
 tag: COMMUNITY
 cover: bella-semester-wrap-up.jpg
