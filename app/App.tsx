@@ -1,5 +1,6 @@
-import { Fragment, useEffect } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { Footer } from "./components/Footer";
+import { Intro } from "./components/Intro";
 import { Header } from "./components/Header";
 import { Committee } from "./pages/Committee";
 import { Home } from "./pages/Home";
@@ -34,8 +35,11 @@ export default function App() {
   const { route, go } = useRoute();
   useEffect(() => { document.title = titleFor(route); }, [route]);
   useReveal(route);
+  // The opening sequence only belongs to a visit that starts on the homepage.
+  const [startedOnHome] = useState(route === "/");
   return <RouterProvider value={go}>
     <div className="site-shell">
+      {startedOnHome && <Intro />}
       <Header route={route} />
       {/* The key makes each page mount afresh, so its enter animation plays on every navigation. */}
       <Fragment key={route}>{pageFor(route)}</Fragment>

@@ -538,3 +538,31 @@ main:has(> .hero) { animation-name: fade-in; }
 /* Scroll reveal (classes are added and removed by app/reveal.ts). */
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s cubic-bezier(.2, .7, .2, 1), transform .7s cubic-bezier(.2, .7, .2, 1); }
 .reveal.is-visible { opacity: 1; transform: none; }
+
+/* ---- Homepage opening sequence (driven by app/components/Intro.tsx) ---- */
+html.intro-playing, html.intro-flying { overflow: hidden; }
+.intro { cursor: pointer; inset: 0; position: fixed; z-index: 100; }
+.intro.is-fly { pointer-events: none; }
+.intro-bg { background: radial-gradient(circle at 50% 46%, #1d1538 0%, var(--bg) 62%); inset: 0; position: absolute; transition: opacity .85s ease; }
+.intro.is-fly .intro-bg { opacity: 0; }
+
+/* The logo-and-name block is the header logo, enlarged and centred. */
+.intro-lockup { gap: 0; left: 50%; position: absolute; top: 50%; transform: translate(-50%, -50%) scale(var(--intro-scale, 4)); transition: transform 1s cubic-bezier(.66, 0, .2, 1); white-space: nowrap; }
+.intro.is-fly .intro-lockup { transform: translate(-50%, -50%) translate(var(--intro-dx, 0px), var(--intro-dy, 0px)) scale(1); }
+
+/* 1. The emblem pops in on its own, extra large. */
+@keyframes intro-pop { from { opacity: 0; scale: .55; } 60% { opacity: 1; } to { opacity: 1; scale: 1; } }
+.intro-emblem { animation: intro-pop .8s cubic-bezier(.2, 1.25, .35, 1) backwards; filter: drop-shadow(0 0 10px rgba(168, 119, 255, .5)); transform: scale(var(--intro-emblem, 1.6)); transition: transform .85s cubic-bezier(.3, .9, .3, 1); }
+.intro.is-name .intro-emblem, .intro.is-fly .intro-emblem { transform: none; }
+
+/* 2. The name opens out beside it. */
+.intro-text { display: inline-block; max-width: 0; opacity: 0; overflow: hidden; transition: max-width .85s cubic-bezier(.3, .9, .3, 1), opacity .55s ease .2s; vertical-align: middle; }
+.intro-text > span { display: block; padding-left: 10px; }
+.intro.is-name .intro-text, .intro.is-fly .intro-text { max-width: 240px; opacity: 1; }
+
+/* While it plays, the page waits: its own entrance starts when the logo sets off for the header. */
+.intro-playing main, .intro-playing .hero::before, .intro-playing .hero-copy > * { animation-play-state: paused; }
+.intro-playing .site-header, .intro-flying .site-header, .intro-done .site-header { animation: none; }
+.intro-playing .site-header .wordmark, .intro-flying .site-header .wordmark { visibility: hidden; }
+.site-header .main-nav, .site-header .menu-button { transition: opacity .7s ease; }
+.intro-playing .site-header .main-nav, .intro-playing .site-header .menu-button { opacity: 0; }

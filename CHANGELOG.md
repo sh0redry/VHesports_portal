@@ -6,6 +6,17 @@ A record of every update to vhesports.com, with dates. Newest first.
 
 ## 2026-11-13
 
+### 首页开场动画 / Homepage opening sequence
+
+- 打开首页时先播放一段开场:深色全屏上队徽放大弹出 → 旁边展开 "VALOUR HOUSE E-SPORTS" 名字 → 两者一起缩小并飞到左上角,正好落在导航栏的标志位置 → 深色背景淡出,首页原有的入场动画(背景、队徽、标题、简介、按钮依次出现)接着播放。全程约 3.3 秒。
+  Opening the homepage now starts with a short sequence: the emblem pops up large on a dark full screen → the name "VALOUR HOUSE E-SPORTS" opens out beside it → both shrink and fly to the top-left corner, landing exactly on the header logo → the dark screen fades and the homepage's existing entrance (background, emblem, title, intro, button in turn) follows. About 3.3 seconds in all.
+- 每次浏览器会话只播放一次,且只在从首页进入网站时播放;从其它页面点回首页不会重播。点击屏幕或按任意键可以跳过。
+  It plays once per browser session, and only when the site is entered on the homepage; returning to the homepage from another page does not replay it. A click or any key skips it.
+- 在首页网址后加 `?intro` 可以重新播放(方便调整时查看)。
+  Adding `?intro` to the homepage address replays it (useful when adjusting it).
+- 系统开启 "减少动画" 时不播放。
+  It does not play when the system "reduce motion" setting is on.
+
 ### 进入动画 / Entrance animations
 
 - 首页首屏:背景照片缓缓收拢到位,队徽、标题、简介和按钮依次从下方浮现;导航栏在网站打开时从上方滑入。
