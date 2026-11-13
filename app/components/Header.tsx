@@ -2,7 +2,7 @@ import { useState } from "react";
 import { asset } from "../data";
 import { Link } from "../router";
 
-const links = [["/", "Home"], ["/news", "News"], ["/committee", "Committee"], ["/vhcg", "VHCG"], ["/toolkit", "Player Toolkit"]] as const;
+const links = [["/", "Home"], ["/news", "News"], ["/gallery", "Gallery"], ["/committee", "Committee"], ["/vhcg", "VHCG"], ["/toolkit", "Player Toolkit"]] as const;
 
 export function Header({ route }: { route: string }) {
   const [open, setOpen] = useState(false);

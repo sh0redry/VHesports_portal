@@ -11,6 +11,7 @@ Every update is recorded in [CHANGELOG.md](CHANGELOG.md).
 | Committee, games, toolkit links, Telegram invite, VHCG results | `app/data.ts` |
 | VHCG rulebooks | `app/vhcgRulebooks.ts` |
 | News posts | `src/content/news/*.md` |
+| Gallery photos | `app/gallery.ts` (files in `public/images/gallery/`) |
 | Page titles and descriptions | `app/siteMeta.json` |
 | One file per page | `app/pages/` |
 | Header and footer | `app/components/` |
@@ -47,6 +48,14 @@ Normal text with **bold**, *italic* and a [link](https://example.com).
 - `cover` (optional): the photo shown on news cards. Without it, a purple tile with the emblem is shown.
 - Images go in `public/images/source/` and are referred to by file name. Keep photos under about 300 KB (1600 px wide JPG is plenty).
 - No code change is needed. A post only needs an entry in `app/articles/index.ts` if it uses a special hand-built layout.
+
+## Adding gallery photos
+
+1. Put the full-size photo in `public/images/gallery/` (1600-1700 px on the long side is plenty).
+2. Put a 640 px wide copy with the same file name in `public/images/gallery/thumbs/`.
+3. Add a line for it in `app/gallery.ts` with its file name, a short description (not displayed) and its pixel size.
+
+Every photo appears on the Gallery page; landscape photos also rotate in the homepage slider.
 
 ## VHCG results
 

@@ -2,14 +2,13 @@ import { useEffect, useState } from "react";
 import { NewsCover } from "../components/NewsCover";
 import { Title } from "../components/Title";
 import { asset, games } from "../data";
+import { galleryImage, galleryPhotos } from "../gallery";
 import { news } from "../news";
 import { Link } from "../router";
 
-const highlights = [
-  ["pc game2.jpg", "Across every platform", "A community for players who enjoy gaming together."],
-  ["mobile gamee7.jpg", "New friends, new games", "Meet people who share your game and your energy."],
-  ["pc game4.jpg", "Play. Learn. Compete.", "Casual sessions, team play and community competition."],
-];
+// The homepage slider shows the landscape photos from the gallery (app/gallery.ts).
+const highlights = galleryPhotos.filter(photo => photo.width > photo.height);
+const twoDigits = (value: number) => String(value).padStart(2, "0");
 
 /** How long each highlight stays on screen before the next one, in milliseconds. */
 const highlightInterval = 6000;
@@ -23,7 +22,7 @@ const allGames = [
 function Highlights() {
   const [slide, setSlide] = useState(0);
   const count = highlights.length;
-  const [image, title, copy] = highlights[slide];
+  const photo = highlights[slide];
 
   // Advance automatically; the timer restarts whenever the slide changes (including by hand).
   useEffect(() => {
@@ -36,17 +35,17 @@ function Highlights() {
     <div className="section-top">
       <div><p className="section-kicker">COMMUNITY HIGHLIGHTS</p><h2>Made to play<br />together.</h2></div>
       <div className="slider-controls">
+        <Link className="button ghost" to="/gallery">View gallery →</Link>
         <button onClick={() => setSlide((slide + count - 1) % count)} aria-label="Previous highlight">←</button>
         <button onClick={() => setSlide((slide + 1) % count)} aria-label="Next highlight">→</button>
       </div>
     </div>
-    <article className="highlight-frame">
-      <img className="highlight-image" src={asset(image)} alt="VH E-Sports activity" loading="lazy" decoding="async" key={image} />
-      <div className="highlight-copy"><span className="highlight-label">0{slide + 1} / 0{count}</span><h3>{title}</h3><p>{copy}</p></div>
-    </article>
+    <Link className="highlight-frame" to="/gallery" aria-label="Open the photo gallery">
+      <img className="highlight-image" src={galleryImage(photo)} alt={photo.alt} loading="lazy" decoding="async" key={photo.file} />
+      <div className="highlight-copy"><span className="highlight-label">{twoDigits(slide + 1)} / {twoDigits(count)}</span></div>
+    </Link>
   </section>;
 }
-
 export function Home() {
   return <main>
     <section className="hero">

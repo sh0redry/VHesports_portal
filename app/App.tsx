@@ -3,6 +3,7 @@ import { Footer } from "./components/Footer";
 import { Intro } from "./components/Intro";
 import { Header } from "./components/Header";
 import { Committee } from "./pages/Committee";
+import { Gallery } from "./pages/Gallery";
 import { Home } from "./pages/Home";
 import { Join } from "./pages/Join";
 import { MatchRecords } from "./pages/MatchRecords";
@@ -20,6 +21,7 @@ function pageFor(route: string) {
   switch (route) {
     case "/": return <Home />;
     case "/news": return <News />;
+    case "/gallery": return <Gallery />;
     case "/committee": return <Committee />;
     case "/vhcg": return <Vhcg />;
     case "/vhcg/match-records": return <MatchRecords />;

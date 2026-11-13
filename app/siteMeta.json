@@ -5,6 +5,7 @@
   "defaultDescription": "Valour House E-Sports at NUS: play together, compete together, belong together.",
   "pages": {
     "/news": { "title": "News", "description": "Announcements, events and stories from the VH E-Sports community." },
+    "/gallery": { "title": "Gallery", "description": "Photos from VH E-Sports sessions, tournaments and get-togethers." },
     "/committee": { "title": "Committee", "description": "Meet the team coordinating sessions, tournaments, partnerships and our gaming divisions." },
     "/vhcg": { "title": "VHCG", "description": "Valour House Cluster Games AY 2026/27: final standings, match records, top players and rulebooks." },
     "/vhcg/match-records": { "title": "VHCG Match Records", "description": "Official match results for Valour House Cluster Games AY 2026/27." },

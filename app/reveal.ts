@@ -11,7 +11,7 @@ const targets = [
   // Home
   ".mission-inner > *", ".section-top", ".news-card", ".highlight-frame", ".section-heading", ".game-card", ".join-cta > *",
   // Lists and cards on the other pages
-  ".news-row", ".member-card", ".tool-card", ".toolkit-category-heading", ".icg-section-title",
+  ".news-row", ".member-card", ".tool-card", ".gallery-item", ".toolkit-category-heading", ".icg-section-title",
   ".standings-table-wrap", ".rule-table-wrap", ".schedule-table-wrap", ".results-table-wrap", ".scoring-strip",
   ".format-grid article", ".rule-card", ".snapshot-grid article", ".join-panel", ".qr-panel", ".faq details", ".registration-cta > *",
   // Articles

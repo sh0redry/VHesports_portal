@@ -7,6 +7,7 @@ export function Footer() {
       <div><strong>VH E-SPORTS</strong><p>Play Together. Compete Together. Belong Together.</p></div>
       <div className="footer-links">
         <Link to="/news">News</Link>
+        <Link to="/gallery">Gallery</Link>
         <Link to="/committee">Committee</Link>
         <Link to="/vhcg">VHCG</Link>
         <Link to="/toolkit">Player Toolkit</Link>

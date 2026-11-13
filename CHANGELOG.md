@@ -6,6 +6,23 @@ A record of every update to vhesports.com, with dates. Newest first.
 
 ## 2026-11-13
 
+### 新增画廊 / Photo gallery added
+
+- 新增 Gallery 页面(`/gallery`),目前收录 11 张往期活动照片:8 张新照片,加上原来首页轮播里的 3 张。导航栏和页脚都加了入口。
+  Added a Gallery page (`/gallery`) with 11 photos from past activities so far: eight new ones plus the three that were in the homepage slider. It is linked from the navigation and the footer.
+- 画廊按瀑布流排列(电脑三列、平板两列、手机一列),横图竖图都保持原比例。点击任意照片可全屏查看大图,支持左右切换(按钮、键盘方向键、手机左右滑动),按 Esc、点关闭按钮或点背景退出。
+  The gallery is a masonry layout (three columns on desktop, two on tablets, one on phones) that keeps each photo's own shape. Selecting a photo opens it full screen, with previous/next (buttons, arrow keys, or a swipe on phones); Esc, the close button or a click on the backdrop closes it.
+- 首页 "Community highlights" 轮播改为播放画廊里的横版照片(目前 9 张);新增 "View gallery" 按钮,点击轮播图也会进入画廊。
+  The homepage "Community highlights" slider now plays the landscape photos from the gallery (nine at present); a "View gallery" button was added, and the slide itself also links to the gallery.
+- 画廊页使用 640 像素宽的缩略图,打开大图时才加载原图。
+  The gallery page uses 640 px thumbnails and loads the full-size photo only when one is opened.
+- 导航栏多了一项,收成菜单按钮的宽度由 1040 像素调整为 1180 像素。
+  With one more navigation item, the point at which the navigation collapses into the menu button moved from 1040 px to 1180 px.
+- 照片不配文字说明,只在大图和轮播上显示序号(如 03 / 11)。
+  Photos carry no captions; only a counter (such as 03 / 11) is shown in the viewer and on the slider.
+- 照片清单在 `app/gallery.ts`,加照片的方法写在该文件顶部和 README 里。
+  The photo list is in `app/gallery.ts`; how to add a photo is described at the top of that file and in the README.
+
 ### 委员会:补上 Ni Huacheng 的照片 / Committee: Ni Huacheng's photo added
 
 - Ni Huacheng 的卡片由队徽占位图换成了他的照片。
