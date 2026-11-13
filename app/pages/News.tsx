@@ -16,9 +16,12 @@ export function News() {
     </div>
     <div className="news-list">
       {news.map(item => <Link className="news-row" to={`/news/${item.slug}`} key={item.slug}>
-        <span>{item.tag}<br />{item.date}</span>
         <NewsCover item={item} />
-        <div><h2>{item.title}</h2><p>{item.excerpt}</p></div>
+        <div className="news-row-text">
+          <span className="news-meta">{item.tag} / {item.date}</span>
+          <h2>{item.title}</h2>
+          <p>{item.excerpt}</p>
+        </div>
         <b>→</b>
       </Link>)}
     </div>

@@ -6,6 +6,21 @@ A record of every update to vhesports.com, with dates. Newest first.
 
 ## 2026-11-13
 
+### 多屏幕宽度适配 / Layout fixes across screen widths
+
+- 新闻列表页重排:封面图放大并随屏幕宽度变化(190–300 像素),标签和日期移到标题上方,标题字号调小。原来封面太小、标题过大,在电脑上比例失衡,在较窄的窗口里标题会被挤成四五行。手机上封面显示在标题上方。
+  News list reworked: larger covers that scale with the screen (190–300 px), tag and date moved above the title, smaller titles. Previously the cover was too small and the title too large on desktop, and in narrower windows titles were squeezed into four or five lines. On phones the cover sits above the title.
+- 导航栏:窗口宽度在 1040 像素以下时改为菜单按钮(原来是 820)。之前在 820–1040 之间导航文字会挤成多行。
+  Navigation: collapses into the menu button below 1040 px (previously 820). Between 820 and 1040 the links used to wrap onto several lines.
+- 首页新闻卡片:平板宽度(521–899 像素)下改为整行卡片(左图右文),不再出现两张一行、一张落单,标题也不再溢出。
+  Homepage news cards: at tablet widths (521–899 px) they become full-width rows (cover left, text right), so there is no orphaned third card and titles no longer overflow.
+- 文章标题字号调小并限制最大值;窄手机(360 像素)上长标题不再超出屏幕。
+  Article titles are smaller with a capped maximum; long titles no longer run off narrow phones (360 px).
+- 窄手机上首页 "活动轮播" 的切换按钮不再伸出屏幕。
+  The highlight slider buttons no longer stick out of the screen on narrow phones.
+- 已在 360、600、834、920、1024、1100、1280、1440、1920 像素宽度下逐页检查,没有横向溢出或文字超框。
+  Every page was checked at 360, 600, 834, 920, 1024, 1100, 1280, 1440 and 1920 px wide: no sideways overflow and no text outside its box.
+
 ### 第三批优化:文案和内容 / Upgrade batch 3: copy and content
 
 - 把三篇早期新闻(Welcome to VH E-Sports、One community. Different games.、VHCG Rules and Player Toolkit Update)合并为一篇 "Welcome to VH E-Sports",作为兴趣小组和网站创建时的初始通知,并重写了正文。另外两篇的旧链接会自动跳到这一篇。
