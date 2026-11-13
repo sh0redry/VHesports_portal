@@ -203,8 +203,8 @@ section, .page { padding-left: clamp(20px, 9vw, 150px); padding-right: clamp(20p
 .tool-card:hover { border-color: var(--accent); transform: translateY(-4px); }
 .tool-card h3 { font-size: 1.45rem; line-height: 1; margin-bottom: 16px; text-transform: uppercase; }
 .tool-card p { color: #bac0cb; line-height: 1.6; margin-bottom: 24px; }
-.tool-card a { color: var(--accent); font-size: .76rem; font-weight: 850; letter-spacing: .11em; margin-top: auto; text-transform: uppercase; }
-.tool-card a:hover { color: #fff; }
+.tool-card .tool-open { color: var(--accent); font-size: .76rem; font-weight: 850; letter-spacing: .11em; margin-top: auto; text-transform: uppercase; }
+.tool-card:hover .tool-open { color: #fff; }
 
 .committee-grid { display: grid; gap: 18px; grid-template-columns: repeat(2, 1fr); }
 .member-card { background: var(--surface); min-height: 440px; overflow: hidden; position: relative; }
@@ -468,3 +468,25 @@ h1, h2, h3 { overflow-wrap: break-word; }
 
 .nowrap { white-space: nowrap; }
 .article h1 { text-wrap: balance; }
+
+/* ---- Player Toolkit: icons and category shortcuts ---- */
+.tool-card { color: inherit; }
+.tool-icon { display: block; flex: none; }
+.tool-icon-wrap { align-items: center; background: rgba(200,255,47,.1); border: 1px solid rgba(200,255,47,.35); color: var(--accent); display: inline-flex; height: 52px; justify-content: center; margin-bottom: 22px; transition: background .2s, color .2s; width: 52px; }
+.tool-icon-wrap .tool-icon { height: 28px; width: 28px; }
+.tool-card:hover .tool-icon-wrap { background: var(--accent); color: var(--bg); }
+/* Mobile game tools use the purple accent so the category is easy to spot. */
+#toolkit-mobile .tool-icon-wrap { background: rgba(168,119,255,.12); border-color: rgba(168,119,255,.5); color: var(--purple-bright); }
+#toolkit-mobile .tool-card:hover { border-color: var(--purple-bright); }
+#toolkit-mobile .tool-card:hover .tool-icon-wrap { background: var(--purple-bright); color: var(--bg); }
+
+.toolkit-jump { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+.toolkit-jump button { align-items: center; background: var(--surface); border: 1px solid rgba(255,255,255,.14); color: #e6e8ee; display: inline-flex; font-size: .74rem; font-weight: 800; gap: 9px; letter-spacing: .09em; padding: 11px 14px; text-transform: uppercase; transition: border-color .2s, color .2s; }
+.toolkit-jump button:hover { border-color: var(--accent); color: #fff; }
+.toolkit-jump .tool-icon { color: var(--accent); height: 18px; width: 18px; }
+.toolkit-jump small { color: #8f95a3; font-size: .72rem; font-weight: 700; }
+/* Leave room for the fixed header when jumping to a category. */
+.toolkit-category { scroll-margin-top: 100px; }
+/* Four mobile tools: one row of four on wide screens, two by two on medium ones. */
+@media (min-width: 1100px) { #toolkit-mobile .tool-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 821px) and (max-width: 1099px) { #toolkit-mobile .tool-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

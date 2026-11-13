@@ -6,6 +6,17 @@ A record of every update to vhesports.com, with dates. Newest first.
 
 ## 2026-11-13
 
+### Player Toolkit 升级:手游工具和图标 / Player Toolkit upgrade: mobile tools and icons
+
+- 新增 "Mobile Game Tools" 分类,共 4 个工具,全部是官方网站:MLBB 英雄排行(胜率、出场率、禁用率和克制关系)、MLBB 英雄图鉴、Honor of Kings 官网、HOK Camp(王者荣耀国际版官方社区,含英雄百科、排行榜和电竞)。
+  Added a "Mobile Game Tools" category with four tools, all official sites: MLBB Hero Rankings (win, pick and ban rates with counters), MLBB Hero Guide, the Honor of Kings website, and HOK Camp (the official Honor of Kings community hub with a hero encyclopedia, leaderboards and esports).
+- 14 个工具每个都有了自己的图标(地图、准星、定位、图表、书本、地球、奖杯、靶心、闪电、仪表、鼠标、键盘、显示器、麦克风),方便一眼找到。手游分类的图标用紫色,其余用绿色。
+  Each of the 14 tools now has its own icon (map, crosshair, pin, chart, book, globe, trophy, target, bolt, gauge, mouse, keyboard, monitor, microphone) so it can be found at a glance. Mobile tools use purple icons; the rest use lime.
+- 页面顶部新增四个分类快捷按钮,显示每类的工具数量,点击直接跳到对应分类。
+  Four category shortcut buttons at the top of the page show how many tools each category has and jump straight to it.
+- 整张工具卡片现在都可以点击,不再只有 "Open Tool" 那一行能点。
+  The whole tool card is now clickable, not just the "Open Tool" line.
+
 ### 新闻标题修改 / News title changed
 
 - 学期收尾那篇新闻的标题由 "Good Games, Great Chicken. Thank You, Bella!" 改为 "Good Games, Great Chicken"。对 Bella 的感谢保留在正文里。

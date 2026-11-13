@@ -25,33 +25,48 @@ export const committee = [
   { name: "Gary Yang", roles: ["Logistics"], photo: "Gary Yang photo.jpg", telegram: "@Gy_yang" },
 ];
 
+// Each tool has an `icon`: one of the names drawn in app/components/ToolIcon.tsx.
 export const toolkitCategories = [
   {
+    id: "valorant",
     title: "VALORANT TOOLS",
     description: "Plan, practice and refine your VALORANT setup.",
     tools: [
-      { name: "Valoplant", description: "VALORANT tactical board and team strategy planner.", url: "https://valoplant.gg/" },
-      { name: "Valorant Crosshair Generator", description: "Create and copy a crosshair configuration.", url: "https://prosettings.net/tools/valorant-crosshair-generator/" },
-      { name: "Valorant Lineup Database", description: "Find agent lineups for maps and situations.", url: "https://lineupsvalorant.com/" },
+      { name: "Valoplant", icon: "map", description: "VALORANT tactical board and team strategy planner.", url: "https://valoplant.gg/" },
+      { name: "Valorant Crosshair Generator", icon: "crosshair", description: "Create and copy a crosshair configuration.", url: "https://prosettings.net/tools/valorant-crosshair-generator/" },
+      { name: "Valorant Lineup Database", icon: "pin", description: "Find agent lineups for maps and situations.", url: "https://lineupsvalorant.com/" },
     ],
   },
   {
+    id: "mobile",
+    title: "MOBILE GAME TOOLS",
+    description: "Official hero data and guides for Mobile Legends and Honor of Kings.",
+    tools: [
+      { name: "MLBB Hero Rankings", icon: "chart", description: "Official win, pick and ban rates for every Mobile Legends hero, with counter picks.", url: "https://www.mobilelegends.com/rank" },
+      { name: "MLBB Hero Guide", icon: "book", description: "Official Mobile Legends hero list with skills, roles and recommended builds.", url: "https://www.mobilelegends.com/hero" },
+      { name: "Honor of Kings", icon: "globe", description: "Official Honor of Kings site: news, heroes and game updates.", url: "https://www.honorofkings.com/" },
+      { name: "HOK Camp", icon: "trophy", description: "Official Honor of Kings community hub: hero encyclopedia, leaderboards and esports.", url: "https://camp.honorofkings.com/" },
+    ],
+  },
+  {
+    id: "aim",
     title: "AIM & PERFORMANCE",
     description: "Train core mechanics and benchmark your reaction time.",
     tools: [
-      { name: "MSLAB", description: "FPS sensitivity testing and aim training tools.", url: "https://mslab.gg/" },
-      { name: "Human Benchmark", description: "Reaction time and cognitive performance tests.", url: "https://humanbenchmark.com/" },
+      { name: "MSLAB", icon: "target", description: "FPS sensitivity testing and aim training tools.", url: "https://mslab.gg/" },
+      { name: "Human Benchmark", icon: "bolt", description: "Reaction time and cognitive performance tests.", url: "https://humanbenchmark.com/" },
     ],
   },
   {
+    id: "hardware",
     title: "HARDWARE & CONNECTION",
     description: "Check the equipment and connection behind your game.",
     tools: [
-      { name: "Cloudflare Speed Test", description: "Measure internet speed, latency and connection quality.", url: "https://speed.cloudflare.com/" },
-      { name: "Mouse Tester", description: "Test mouse click responsiveness and performance.", url: "https://mousetester.io/" },
-      { name: "Keyboard Test", description: "Check keyboard keys and input response.", url: "https://keyboardtest.io/" },
-      { name: "TestUFO", description: "Display refresh rate and motion-blur test.", url: "https://www.testufo.com/" },
-      { name: "Mic Test", description: "Quickly test microphone input in your browser.", url: "https://mictest.co/" },
+      { name: "Cloudflare Speed Test", icon: "gauge", description: "Measure internet speed, latency and connection quality. Works on phones too.", url: "https://speed.cloudflare.com/" },
+      { name: "Mouse Tester", icon: "mouse", description: "Test mouse click responsiveness and performance.", url: "https://mousetester.io/" },
+      { name: "Keyboard Test", icon: "keyboard", description: "Check keyboard keys and input response.", url: "https://keyboardtest.io/" },
+      { name: "TestUFO", icon: "monitor", description: "Display refresh rate and motion-blur test.", url: "https://www.testufo.com/" },
+      { name: "Mic Test", icon: "mic", description: "Quickly test microphone input in your browser.", url: "https://mictest.co/" },
     ],
   },
 ];
